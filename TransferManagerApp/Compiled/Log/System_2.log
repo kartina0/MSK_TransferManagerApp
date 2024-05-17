@@ -1,0 +1,189 @@
+2024/04/03 23:30:19.037,INFO,Logger起動
+2024/04/03 23:30:19.065,INFO,前回アプリ終了時ステータス取得 完了
+2024/04/03 23:30:19.098,METHOD_IN,PLC_IF.Open(DUMMY;PLC_AISLE127.0.0.1)
+2024/04/03 23:30:19.658,METHOD_OUT,PLC_IF.Open : STATUS_SUCCESS
+2024/04/03 23:30:19.660,INFO,Resource起動
+2024/04/03 23:30:19.678,SYSTEM,***********************************
+2024/04/03 23:30:19.679,SYSTEM,起動中 PC名=LAPTOP-DES3I23Q , IP=172.19.0.1
+2024/04/03 23:30:19.679,SYSTEM,OS Ver=Microsoft Windows NT 6.2.9200.0 
+2024/04/03 23:30:19.679,SYSTEM,TransferManagerApp Ver=1.0.0.0 
+2024/04/03 23:30:19.679,SYSTEM,***********************************
+2024/04/03 23:30:19.679,METHOD_IN,Manager Start()
+2024/04/03 23:30:19.679,INFO,システムスレッド 起動
+2024/04/03 23:30:19.684,METHOD_IN,Manager Thread_System()
+2024/04/03 23:30:19.693,INFO,接続確認スレッド 起動
+2024/04/03 23:30:19.701,METHOD_IN,Manager Thread_ConnectionCheck()
+2024/04/03 23:30:19.710,INFO,ファイルクリーナスレッド 起動
+2024/04/03 23:30:19.714,METHOD_IN,Manager Thread_FileCleaner()
+2024/04/03 23:30:19.723,INFO,エラー履歴ファイル出力スレッド 起動
+2024/04/03 23:30:19.728,METHOD_IN,Manager Thread_ErrorHistory()
+2024/04/03 23:30:19.736,METHOD_OUT,Manager Start : STATUS_SUCCESS
+2024/04/03 23:30:19.736,INFO,Manager起動
+2024/04/03 23:30:19.748,METHOD_IN,BatchFile Load()
+2024/04/03 23:30:19.898,METHOD_OUT,BatchFile.Load : STATUS_SUCCESS
+2024/04/03 23:30:19.898,INFO,BatchFile読み込み完了
+2024/04/03 23:30:19.977,INFO,商品マスター読み出し完了
+2024/04/03 23:30:19.987,INFO,店マスター読み出し完了
+2024/04/03 23:30:19.990,INFO,作業者マスター読み出し完了
+2024/04/03 23:30:19.999,ERROR,1便のPICKDATA0ファイルが本日のものではありません。
+2024/04/03 23:30:20.260,INFO,2便のPICKDATA読み出し完了
+2024/04/03 23:30:20.942,INFO,3便のPICKDATA読み出し完了
+2024/04/03 23:30:20.942,INFO,DB_IPアドレス : 127.0.0.1
+2024/04/03 23:30:20.943,INFO,DBセットアップ
+2024/04/03 23:30:22.013,INFO,既に本日のテーブルあり
+2024/04/03 23:30:25.535,INFO,DBレコード削除完了
+2024/04/03 23:31:00.622,INFO,商品ヘッダテーブル 書き込み完了
+2024/04/03 23:31:00.622,METHOD_IN,ServerControl Start()
+2024/04/03 23:31:00.627,METHOD_IN,ServerControl Thread_Server()
+2024/04/03 23:31:00.635,METHOD_OUT,ServerControl Start : STATUS_SUCCESS
+2024/04/03 23:31:00.635,INFO,Serverスレッド起動
+2024/04/03 23:31:00.635,ERROR,1便のPICKDATA0ファイルが本日のものではありません。
+2024/04/03 23:31:00.636,INFO,ServerControl 仕分データ取得中 1便
+2024/04/03 23:31:00.647,INFO,ServerControl 仕分データ取得中 2便
+2024/04/03 23:31:03.357,INFO,ServerControl 仕分データ取得中 3便
+2024/04/03 23:31:09.558,INFO,ServerControl 仕分データ取得 完了
+2024/04/03 23:31:09.558,INFO,ServerControl 仕分実績データ取得中 1便
+2024/04/03 23:31:09.561,INFO,ServerControl 仕分実績データ取得中 2便
+2024/04/03 23:31:09.562,INFO,ServerControl 仕分実績データ取得中 3便
+2024/04/03 23:31:09.562,INFO,ServerControl 仕分実績データ取得 完了
+2024/04/03 23:31:09.583,INFO,ServerControl 仕分実績データリスト作成/更新中 1便
+2024/04/03 23:31:09.584,INFO,ServerControl 仕分実績データリスト作成/更新中 2便
+2024/04/03 23:31:09.601,INFO,ServerControl 仕分実績データリスト作成/更新中 3便
+2024/04/03 23:31:09.624,INFO,ServerControl 仕分実績データリスト作成/更新 完了
+2024/04/03 23:31:09.624,INFO,ServerControl 仕分実績データ書込み中 1便
+2024/04/03 23:31:09.625,INFO,ServerControl 仕分実績データ書込み中 2便
+2024/04/03 23:31:09.626,INFO,ServerControl 仕分実績データ書込み中 3便
+2024/04/03 23:31:09.626,INFO,ServerControl 仕分実績データ書込み 完了
+2024/04/03 23:31:09.725,INFO,Serverスレッド初期化完了
+2024/04/03 23:31:09.725,METHOD_IN,Cycle Start()
+2024/04/03 23:31:09.731,METHOD_IN,Cycle Thread_Cycle()
+2024/04/03 23:31:09.738,METHOD_IN,CycleAisle Start()
+2024/04/03 23:31:09.746,METHOD_IN,CycleAisle Thread_Cycle()
+2024/04/03 23:31:09.750,METHOD_OUT,CycleAisle Start : STATUS_SUCCESS
+2024/04/03 23:31:09.750,METHOD_OUT,Cycle Start : STATUS_SUCCESS
+2024/04/03 23:31:09.750,INFO,Cycleスレッド起動
+2024/04/03 23:31:09.750,METHOD_OUT,windowOpening OpeningSequence : STATUS_SUCCESS
+2024/04/03 23:31:09.757,INFO,ネットワーク：PLC1に接続されました ： 127.0.0.1
+2024/04/03 23:31:09.757,INFO,ネットワーク：Serverに接続されました ： 127.0.0.1
+2024/04/03 23:31:10.365,CONTROL,windowOpening Window_Closing()
+2024/04/03 23:31:13.370,CONTROL,windowMain Button_Click() btnOrder
+2024/04/03 23:31:13.371,CONTROL,windowMain Function() ORDER
+2024/04/03 23:31:13.598,CONTROL,windowOrder Window_Loaded()
+2024/04/03 23:31:13.600,CONTROL,ucTab_OperationMonitor UserControl_Loaded()
+2024/04/03 23:31:13.610,CONTROL,ucTab_ProgressMonitor UserControl_Loaded()
+2024/04/03 23:31:13.613,METHOD_OUT,ucTab_ProgressMonitor.InitListView : STATUS_SUCCESS
+2024/04/03 23:31:13.613,METHOD_IN,ucTab_ProgressMonitor.comboPostNo_SelectionChanged()
+2024/04/03 23:31:13.613,METHOD_OUT,ucTab_ProgressMonitor.comboPostNo_SelectionChanged : STATUS_SUCCESS
+2024/04/03 23:31:13.614,METHOD_OUT,ucTab_ProgressMonitor.InitTimer : STATUS_SUCCESS
+2024/04/03 23:31:13.614,CONTROL,ucTab_WorkStatus UserControl_Loaded()
+2024/04/03 23:31:13.631,METHOD_IN,ucTab_WorkStatus.UpdateWorkNameComboBox()
+2024/04/03 23:31:13.642,METHOD_OUT,ucTab_WorkStatus.UpdateWorkNameComboBox : STATUS_SUCCESS
+2024/04/03 23:31:13.644,METHOD_IN,ucTab_WorkStatus.Search()
+2024/04/03 23:31:13.680,METHOD_OUT,ucTab_WorkStatus.Search : STATUS_SUCCESS
+2024/04/03 23:31:13.680,CONTROL,ucTab_WorkStatus UserControl_Loaded()
+2024/04/03 23:31:13.683,METHOD_IN,ucTab_ErrorHistory.InitTimer()
+2024/04/03 23:31:13.683,METHOD_OUT,ucTab_ErrorHistory.InitTimer : STATUS_SUCCESS
+2024/04/03 23:31:17.450,CONTROL,windowOrder Menu_Click() menuTool_MasterFile
+2024/04/03 23:31:17.549,CONTROL,windowOrderInfo Window_Loaded()
+2024/04/03 23:31:17.552,METHOD_IN,windowOrderInfo.Update()
+2024/04/03 23:31:17.579,METHOD_OUT,windowOrderInfo.Update : STATUS_SUCCESS
+2024/04/03 23:31:19.628,ERROR,1便のPICKDATA0ファイルが本日のものではありません。
+2024/04/03 23:31:19.628,INFO,ServerControl 仕分データ取得中 1便
+2024/04/03 23:31:19.630,INFO,ServerControl 仕分データ取得中 2便
+2024/04/03 23:31:19.634,INFO,ServerControl 仕分データ取得中 3便
+2024/04/03 23:31:19.635,INFO,ServerControl 仕分データ取得 完了
+2024/04/03 23:31:19.659,INFO,ServerControl 仕分実績データリスト作成/更新中 1便
+2024/04/03 23:31:19.659,INFO,ServerControl 仕分実績データリスト作成/更新中 2便
+2024/04/03 23:31:19.674,INFO,ServerControl 仕分実績データリスト作成/更新中 3便
+2024/04/03 23:31:19.701,INFO,ServerControl 仕分実績データリスト作成/更新 完了
+2024/04/03 23:31:19.701,INFO,ServerControl 仕分実績データ書込み中 1便
+2024/04/03 23:31:19.701,INFO,ServerControl 仕分実績データ書込み中 2便
+2024/04/03 23:31:19.702,INFO,ServerControl 仕分実績データ書込み中 3便
+2024/04/03 23:31:19.702,INFO,ServerControl 仕分実績データ書込み 完了
+2024/04/03 23:31:23.494,CONTROL,windowOrderInfo Button_Click() btnStoreMaster
+2024/04/03 23:31:24.577,CONTROL,windowOrderInfo Button_Click() btnWorkerMaster
+2024/04/03 23:31:25.974,CONTROL,windowOrderInfo Button_Click() btnWorkMaster
+2024/04/03 23:31:29.706,ERROR,1便のPICKDATA0ファイルが本日のものではありません。
+2024/04/03 23:31:29.706,INFO,ServerControl 仕分データ取得中 1便
+2024/04/03 23:31:29.707,INFO,ServerControl 仕分データ取得中 2便
+2024/04/03 23:31:29.709,INFO,ServerControl 仕分データ取得中 3便
+2024/04/03 23:31:29.710,INFO,ServerControl 仕分データ取得 完了
+2024/04/03 23:31:29.730,INFO,ServerControl 仕分実績データリスト作成/更新中 1便
+2024/04/03 23:31:29.730,INFO,ServerControl 仕分実績データリスト作成/更新中 2便
+2024/04/03 23:31:29.746,INFO,ServerControl 仕分実績データリスト作成/更新中 3便
+2024/04/03 23:31:29.766,INFO,ServerControl 仕分実績データリスト作成/更新 完了
+2024/04/03 23:31:29.766,INFO,ServerControl 仕分実績データ書込み中 1便
+2024/04/03 23:31:29.766,INFO,ServerControl 仕分実績データ書込み中 2便
+2024/04/03 23:31:29.767,INFO,ServerControl 仕分実績データ書込み中 3便
+2024/04/03 23:31:29.767,INFO,ServerControl 仕分実績データ書込み 完了
+2024/04/03 23:31:33.224,CONTROL,windowOrderInfo Button_Click() btnClose
+2024/04/03 23:31:33.224,CONTROL,windowOrderInfo Window_Closing()
+2024/04/03 23:31:37.265,CONTROL,windowOrder Menu_Click() menuTool_OrderInfo
+2024/04/03 23:31:37.403,CONTROL,windowOrderInfo Window_Loaded()
+2024/04/03 23:31:37.407,METHOD_IN,windowOrderInfo.Update()
+2024/04/03 23:31:38.076,METHOD_OUT,windowOrderInfo.Update : STATUS_SUCCESS
+2024/04/03 23:31:39.768,ERROR,1便のPICKDATA0ファイルが本日のものではありません。
+2024/04/03 23:31:39.768,INFO,ServerControl 仕分データ取得中 1便
+2024/04/03 23:31:39.769,INFO,ServerControl 仕分データ取得中 2便
+2024/04/03 23:31:39.770,INFO,ServerControl 仕分データ取得中 3便
+2024/04/03 23:31:39.771,INFO,ServerControl 仕分データ取得 完了
+2024/04/03 23:31:39.800,INFO,ServerControl 仕分実績データリスト作成/更新中 1便
+2024/04/03 23:31:39.800,INFO,ServerControl 仕分実績データリスト作成/更新中 2便
+2024/04/03 23:31:39.824,INFO,ServerControl 仕分実績データリスト作成/更新中 3便
+2024/04/03 23:31:39.853,INFO,ServerControl 仕分実績データリスト作成/更新 完了
+2024/04/03 23:31:39.853,INFO,ServerControl 仕分実績データ書込み中 1便
+2024/04/03 23:31:39.853,INFO,ServerControl 仕分実績データ書込み中 2便
+2024/04/03 23:31:39.854,INFO,ServerControl 仕分実績データ書込み中 3便
+2024/04/03 23:31:39.854,INFO,ServerControl 仕分実績データ書込み 完了
+2024/04/03 23:31:43.613,CONTROL,windowOrderInfo Button_Click() btnWorkHeaderExecute
+2024/04/03 23:31:43.882,CONTROL,windowOrderInfo Button_Click() btnStoreOrder
+2024/04/03 23:31:44.242,CONTROL,windowOrderInfo Button_Click() btnStoreOrderExecute
+2024/04/03 23:31:44.591,CONTROL,windowOrderInfo Button_Click() btnStoreOrder_batchConv
+2024/04/03 23:31:45.131,CONTROL,windowOrderInfo Button_Click() btnWorkHeader
+2024/04/03 23:31:46.166,CONTROL,windowOrderInfo Button_Click() btnClose
+2024/04/03 23:31:46.166,CONTROL,windowOrderInfo Window_Closing()
+2024/04/03 23:31:47.420,CONTROL,windowOrder Button_Click() btnClose
+2024/04/03 23:31:47.421,CONTROL,windowOrder Window_Closing()
+2024/04/03 23:31:47.421,CONTROL,ucTab_OperationMonitor Dispose()
+2024/04/03 23:31:47.421,CONTROL,ucTab_ProgressMonitor Dispose()
+2024/04/03 23:31:47.421,CONTROL,ucTab_WorkStatus Dispose()
+2024/04/03 23:31:47.421,CONTROL,ucTab_WorkStatus Dispose()
+2024/04/03 23:31:48.665,CONTROL,windowMain Button_Click() btnExit
+2024/04/03 23:31:48.665,CONTROL,windowMain Function() EXIT
+2024/04/03 23:31:49.345,METHOD_IN,Cycle Close()
+2024/04/03 23:31:49.748,METHOD_OUT,Cycle Thread_Cycle : STATUS_SUCCESS
+2024/04/03 23:31:49.751,INFO,サイクル管理スレッド 終了
+2024/04/03 23:31:49.751,METHOD_IN,CycleAisle Close()
+2024/04/03 23:31:49.856,ERROR,1便のPICKDATA0ファイルが本日のものではありません。
+2024/04/03 23:31:49.856,INFO,ServerControl 仕分データ取得中 1便
+2024/04/03 23:31:49.857,INFO,ServerControl 仕分データ取得中 2便
+2024/04/03 23:31:49.858,INFO,ServerControl 仕分データ取得中 3便
+2024/04/03 23:31:49.859,INFO,ServerControl 仕分データ取得 完了
+2024/04/03 23:31:49.861,METHOD_OUT,CycleAisle Thread_Cycle : STATUS_SUCCESS
+2024/04/03 23:31:49.887,INFO,ServerControl 仕分実績データリスト作成/更新中 1便
+2024/04/03 23:31:49.887,INFO,ServerControl 仕分実績データリスト作成/更新中 2便
+2024/04/03 23:31:49.905,INFO,ServerControl 仕分実績データリスト作成/更新中 3便
+2024/04/03 23:31:49.923,INFO,ServerControl 仕分実績データリスト作成/更新 完了
+2024/04/03 23:31:49.923,INFO,ServerControl 仕分実績データ書込み中 1便
+2024/04/03 23:31:49.923,INFO,ServerControl 仕分実績データ書込み中 2便
+2024/04/03 23:31:49.924,INFO,ServerControl 仕分実績データ書込み中 3便
+2024/04/03 23:31:49.924,INFO,ServerControl 仕分実績データ書込み 完了
+2024/04/03 23:31:49.953,INFO,サイクル管理スレッド 終了
+2024/04/03 23:31:49.953,METHOD_OUT,CycleAisle Close : STATUS_SUCCESS
+2024/04/03 23:31:49.953,METHOD_OUT,Cycle Close : STATUS_SUCCESS
+2024/04/03 23:31:49.953,METHOD_IN,ServerControl Close()
+2024/04/03 23:31:59.925,METHOD_OUT,ServerControl Thread_Server : STATUS_SUCCESS
+2024/04/03 23:31:59.954,INFO,サイクル管理スレッド 終了
+2024/04/03 23:31:59.954,METHOD_OUT,ServerControl Close : STATUS_SUCCESS
+2024/04/03 23:31:59.954,METHOD_IN,Manager Close()
+2024/04/03 23:32:00.106,INFO,システムスレッド 終了
+2024/04/03 23:32:00.108,INFO,接続確認スレッド 終了
+2024/04/03 23:32:00.110,INFO,ファイルクリーナスレッド 終了
+2024/04/03 23:32:00.112,INFO,エラー履歴ファイル出力スレッド 終了
+2024/04/03 23:32:00.114,METHOD_OUT,Manager Close : STATUS_SUCCESS
+2024/04/03 23:32:00.115,METHOD_IN,PLC_IF.Close()
+2024/04/03 23:32:00.122,ERROR,スレッドを中止しようとしました。
+2024/04/03 23:32:00.123,ERROR,スレッドを中止しようとしました。
+2024/04/03 23:32:00.124,ERROR,スレッドを中止しようとしました。
+2024/04/03 23:32:00.128,ERROR,スレッドを中止しようとしました。
+2024/04/03 23:32:00.690,METHOD_OUT,PLC_IF.Close : STATUS_SUCCESS

@@ -1,0 +1,275 @@
+﻿<!-- Copyright © 2023 DATALINK -->
+<Window x:Class="TransferManagerApp_Debug.Debug_windowPlcSimulator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TransferManagerApp_Debug"
+        mc:Ignorable="d"
+        Title="Debug_windowPlcSimulator" Height="1000" Width="1800"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid
+        Background="#303020">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="24*"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel
+                Grid.Row="0"
+                Margin="2"
+                LastChildFill="False">
+            <Label
+                x:Name="lblTitle"
+                Margin="10,0,10,0"
+                Content="PLCシミュレーター"
+                DockPanel.Dock="Left"
+                FontSize="18"
+                Foreground="#DDD78B"
+                Grid.Row="0"/>
+            
+            <Button
+                x:Name="btnClose"
+                Content="閉じる"
+                DockPanel.Dock="Right"
+                Margin="10,0,10,0"
+                Width="80"
+                Background="Orange"
+                FontSize="14"
+                Padding="0"
+                Click="Button_Click"/>
+            
+            <StackPanel
+                Margin="10,0,10,0"
+                DockPanel.Dock="Right"
+                Orientation="Horizontal">
+                <Button
+                    x:Name="btnAuto"
+                    Content="運転"
+                    Margin="5,0,5,0"
+                    Width="80"
+                    Background="Orange"
+                    FontSize="14"
+                    Padding="0"
+                    Click="Button_Click"/>
+                <Button
+                    x:Name="btnStop"
+                    Content="停止"
+                    Margin="5,0,5,0"
+                    Width="80"
+                    Background="Orange"
+                    FontSize="14"
+                    Padding="0"
+                    Click="Button_Click"/>
+            </StackPanel>
+
+            <StackPanel
+                Margin="10,0,10,0"
+                DockPanel.Dock="Right"
+                Orientation="Horizontal">
+                <TextBox
+                    x:Name="txtJanCode"
+                    DockPanel.Dock="Right"
+                    Margin="5,0,5,0"
+                    Width="200"
+                    Background="White"
+                    FontSize="12"
+                    Padding="0"/>
+                <Button
+                    x:Name="btnReadWorkJan"
+                    Content="商品読み込み(JAN指定)"
+                    DockPanel.Dock="Right"
+                    Margin="5,0,5,0"
+                    Width="150"
+                    Background="Orange"
+                    FontSize="14"
+                    Padding="0"
+                    Click="Button_Click"/>
+                <Button
+                    x:Name="btnReadWork"
+                    Content="商品読み込み"
+                    DockPanel.Dock="Right"
+                    Margin="5,0,5,0"
+                    Width="100"
+                    Background="Orange"
+                    FontSize="14"
+                    Padding="0"
+                    Click="Button_Click"/>
+                <Button
+                    x:Name="btnClear"
+                    Content="クリア"
+                    DockPanel.Dock="Right"
+                    Margin="5,0,5,0"
+                    Width="100"
+                    Background="Orange"
+                    FontSize="14"
+                    Padding="0"
+                    Click="Button_Click"/>
+            </StackPanel>
+        </DockPanel>
+
+        <StackPanel
+            Grid.Row="1"
+            Margin="2"
+            Orientation="Horizontal">
+            <Button
+                x:Name="btnAutoReady"
+                Content="運転可能"
+                DockPanel.Dock="Right"
+                Margin="5,0,5,0"
+                Width="80"
+                FontSize="14"
+                Padding="0"
+                Click="Button_Click"/>
+            <Label
+                x:Name="lblAutoRunningReq"
+                Content="運転要求"
+                DockPanel.Dock="Right"
+                Margin="5,0,5,0"
+                Width="80"
+                FontSize="14"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                BorderBrush="DimGray"
+                BorderThickness="1"
+                Padding="0"/>
+            <Label
+                x:Name="lblAutoStopReq"
+                Content="停止要求"
+                DockPanel.Dock="Right"
+                Margin="5,0,5,0"
+                Width="80"
+                FontSize="14"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                BorderBrush="DimGray"
+                BorderThickness="1"
+                Padding="0"/>
+            <Label
+                x:Name="lblAutoRunning"
+                Content="運転中"
+                DockPanel.Dock="Right"
+                Margin="5,0,5,0"
+                Width="80"
+                FontSize="14"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                BorderBrush="DimGray"
+                BorderThickness="1"
+                Padding="0"/>
+            <Label
+                x:Name="lblAutoStop"
+                Content="停止中"
+                DockPanel.Dock="Right"
+                Margin="5,0,5,0"
+                Width="80"
+                FontSize="14"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                BorderBrush="DimGray"
+                BorderThickness="1"
+                Padding="0"/>
+            <Label
+                x:Name="lblCurrentRegistNoL"
+                Content="0"
+                DockPanel.Dock="Right"
+                Margin="5,0,5,0"
+                Width="50"
+                FontSize="14"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                BorderBrush="DimGray"
+                BorderThickness="1"
+                Padding="0"/>
+            <Label
+                x:Name="lblCurrentRegistNoR"
+                Content="0"
+                DockPanel.Dock="Right"
+                Margin="5,0,5,0"
+                Width="50"
+                FontSize="14"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                BorderBrush="DimGray"
+                BorderThickness="1"
+                Padding="0"/>
+        </StackPanel>
+
+
+
+        <Grid
+            x:Name="gridWork"
+            Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--<local:ucWork
+                x:Name="ucWork01"
+                Grid.Column="0"
+                Grid.Row="0"
+                Padding="0"/>
+            <local:ucWork
+                x:Name="ucWork02"
+                Grid.Column="0"
+                Grid.Row="0"
+                Padding="0"/>
+            <local:ucWork
+                x:Name="ucWork03"
+                Grid.Column="0"
+                Grid.Row="0"
+                Padding="0"/>
+            <local:ucWork
+                x:Name="ucWork04"
+                Grid.Column="0"
+                Grid.Row="0"
+                Padding="0"/>
+            <local:ucWork
+                x:Name="ucWork05"
+                Grid.Column="0"
+                Grid.Row="0"
+                Padding="0"/>
+            <local:ucWork
+                x:Name="ucWork06"
+                Grid.Column="0"
+                Grid.Row="0"
+                Padding="0"/>
+            <local:ucWork
+                x:Name="ucWork07"
+                Grid.Column="0"
+                Grid.Row="0"
+                Padding="0"/>
+            <local:ucWork
+                x:Name="ucWork08"
+                Grid.Column="0"
+                Grid.Row="0"
+                Padding="0"/>
+            <local:ucWork
+                x:Name="ucWork09"
+                Grid.Column="0"
+                Grid.Row="0"
+                Padding="0"/>
+            <local:ucWork
+                x:Name="ucWork10"
+                Grid.Column="0"
+                Grid.Row="0"
+                Padding="0"/>-->
+
+        </Grid>
+
+
+
+    </Grid>
+</Window>

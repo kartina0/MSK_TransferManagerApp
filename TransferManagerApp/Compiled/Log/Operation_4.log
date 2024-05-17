@@ -1,0 +1,12 @@
+2024/04/03 23:44:53.197,windowOpening Window_Closing()
+2024/04/03 23:44:54.301,windowMain Button_Click() btnOrder
+2024/04/03 23:44:54.301,windowMain Function() ORDER
+2024/04/03 23:44:54.482,windowOrder Window_Loaded()
+2024/04/03 23:44:54.483,ucTab_OperationMonitor UserControl_Loaded()
+2024/04/03 23:44:54.502,ucTab_ProgressMonitor UserControl_Loaded()
+2024/04/03 23:44:54.505,ucTab_WorkStatus UserControl_Loaded()
+2024/04/03 23:44:54.568,ucTab_WorkStatus UserControl_Loaded()
+2024/04/03 23:44:57.221,windowOrder Menu_Click() menuTool_MasterFile
+2024/04/03 23:44:57.314,windowOrderInfo Window_Loaded()
+2024/04/03 23:45:35.522,windowOrderInfo Button_Click() btnClose
+2024/04/03 23:45:35.522,windowOrderInfo Window_Closing()

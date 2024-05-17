@@ -1,0 +1,22 @@
+2024/04/04 10:33:26.746,windowOpening Window_Closing()
+2024/04/04 10:33:28.659,windowMain Button_Click() btnOrder
+2024/04/04 10:33:28.659,windowMain Function() ORDER
+2024/04/04 10:33:28.886,windowOrder Window_Loaded()
+2024/04/04 10:33:28.887,ucTab_OperationMonitor UserControl_Loaded()
+2024/04/04 10:33:28.899,ucTab_ProgressMonitor UserControl_Loaded()
+2024/04/04 10:33:28.903,ucTab_WorkStatus UserControl_Loaded()
+2024/04/04 10:33:28.976,ucTab_WorkStatus UserControl_Loaded()
+2024/04/04 10:33:31.420,windowOrder Menu_Click() menuTool_MasterFile
+2024/04/04 10:33:31.517,windowOrderInfo Window_Loaded()
+2024/04/04 10:33:35.465,windowOrderInfo Button_Click() btnStoreMaster
+2024/04/04 10:33:35.779,windowOrderInfo Button_Click() btnWorkerMaster
+2024/04/04 10:33:36.703,windowOrderInfo Button_Click() btnClose
+2024/04/04 10:33:36.703,windowOrderInfo Window_Closing()
+2024/04/04 10:33:37.411,windowOrder Button_Click() btnClose
+2024/04/04 10:33:37.412,windowOrder Window_Closing()
+2024/04/04 10:33:37.412,ucTab_OperationMonitor Dispose()
+2024/04/04 10:33:37.412,ucTab_ProgressMonitor Dispose()
+2024/04/04 10:33:37.413,ucTab_WorkStatus Dispose()
+2024/04/04 10:33:37.413,ucTab_WorkStatus Dispose()
+2024/04/04 10:33:38.209,windowMain Button_Click() btnExit
+2024/04/04 10:33:38.209,windowMain Function() EXIT

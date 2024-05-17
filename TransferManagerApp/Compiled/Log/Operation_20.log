@@ -1,0 +1,8 @@
+2024/03/21 16:23:06.159,windowOpening Window_Closing()
+2024/03/21 16:23:12.162,windowMain Button_Click() btnOrder
+2024/03/21 16:23:12.163,windowMain Function() ORDER
+2024/03/21 16:23:12.437,windowOrder Window_Loaded()
+2024/03/21 16:23:12.438,ucTab_OperationMonitor UserControl_Loaded()
+2024/03/21 16:23:12.451,ucTab_ProgressMonitor UserControl_Loaded()
+2024/03/21 16:23:12.457,ucTab_WorkStatus UserControl_Loaded()
+2024/03/21 16:23:12.482,ucTab_WorkStatus UserControl_Loaded()

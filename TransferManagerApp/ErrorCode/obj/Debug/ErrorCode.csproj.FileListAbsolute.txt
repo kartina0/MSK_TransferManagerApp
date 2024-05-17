@@ -1,0 +1,12 @@
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\Compiled\ErrorCode.dll
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\Compiled\ErrorCode.pdb
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\ErrorCode\obj\Debug\ErrorCode.csproj.AssemblyReference.cache
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\ErrorCode\obj\Debug\ErrorCode.csproj.CoreCompileInputs.cache
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\ErrorCode\obj\Debug\ErrorCode.dll
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\ErrorCode\obj\Debug\ErrorCode.pdb
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\Compiled\ErrorCode.dll
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\Compiled\ErrorCode.pdb
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ErrorCode\obj\Debug\ErrorCode.csproj.AssemblyReference.cache
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ErrorCode\obj\Debug\ErrorCode.csproj.CoreCompileInputs.cache
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ErrorCode\obj\Debug\ErrorCode.dll
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ErrorCode\obj\Debug\ErrorCode.pdb

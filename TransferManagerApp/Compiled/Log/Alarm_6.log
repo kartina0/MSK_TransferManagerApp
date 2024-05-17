@@ -1,0 +1,14 @@
+2024/04/03 23:38:49.525,MasterFileManager ReadMasterWork() : System.FormatException: 入力文字列の形式が正しくありません。
+   場所 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   場所 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   場所 System.Int32.Parse(String s)
+   場所 ServerModule.MasterFileManager.ReadMasterWork() 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 559
+2024/04/03 23:38:49.549,MASTER_WORK_FILE_READ_ERROR
+2024/04/03 23:38:49.573,1便のPICKDATA0ファイルが本日のものではありません。
+2024/04/03 23:38:53.271,MasterFileManager ReadMasterWork() : System.FormatException: 入力文字列の形式が正しくありません。
+   場所 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   場所 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   場所 System.Int32.Parse(String s)
+   場所 ServerModule.MasterFileManager.ReadMasterWork() 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 559
+2024/04/03 23:38:53.272,MASTER_WORK_FILE_READ_ERROR
+2024/04/03 23:38:53.277,1便のPICKDATA0ファイルが本日のものではありません。

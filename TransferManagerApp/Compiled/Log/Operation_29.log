@@ -1,0 +1,8 @@
+2024/03/19 18:47:40.727,windowOpening Window_Closing()
+2024/03/19 18:47:42.074,windowMain Button_Click() btnRegistry
+2024/03/19 18:47:42.074,windowMain Function() REGISTRY
+2024/03/19 18:47:42.155,windowOrder Window_Loaded()
+2024/03/19 18:47:42.157,ucTab_ShelfMaster UserControl_Loaded()
+2024/03/19 18:47:43.907,ucTab_ShelfMaster BtnBatch_Click() 
+2024/03/19 18:47:43.908,ucTab_ShelfMaster comboUnitNo_SelectionChanged()
+2024/03/19 18:47:47.506,ucTab_ShelfMaster BtnBatch_Click() 

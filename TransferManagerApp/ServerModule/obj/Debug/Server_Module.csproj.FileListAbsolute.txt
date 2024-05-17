@@ -1,0 +1,2 @@
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\Server\obj\Debug\Server_Module.csproj.AssemblyReference.cache
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\Server\obj\Debug\Server_Module.csproj.CoreCompileInputs.cache

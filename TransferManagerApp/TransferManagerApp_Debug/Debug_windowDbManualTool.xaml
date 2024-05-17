@@ -1,0 +1,152 @@
+﻿<Window x:Class="TransferManagerApp_Debug.Debug_windowDbManualTool"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TransferManagerApp_Debug"
+        mc:Ignorable="d"
+        Title="Debug_windowDbManualTool" Height="400" Width="600"
+        Loaded="Window_Loaded" Closing="Window_Closing">
+    
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--<ScrollViewer
+            Grid.Row="1"
+            Background="AliceBlue"
+            HorizontalScrollBarVisibility="Auto" Margin="10,0,-10,69" Grid.RowSpan="2">
+
+            <StackPanel
+                Orientation="Vertical">
+                <StackPanel
+                    x:Name="panelHeader"
+                    Orientation="Horizontal"
+                    Height="30"
+                    VerticalAlignment="Top">
+                    <Label
+                        x:Name="lblOrderDate"
+                        Content="納品日"
+                        Width="Auto"
+                        BorderBrush="Black"
+                        BorderThickness="1"/>
+                    <Label
+                        x:Name="lblSupplierCode"
+                        Content="取引先コード"
+                        Width="Auto"
+                        BorderBrush="Black"
+                        BorderThickness="1"/>
+                    <Label
+                        x:Name="lblVDRCode"
+                        Content="VDRコード"
+                        Width="Auto"
+                        BorderBrush="Black"
+                        BorderThickness="1"/>
+                    <Label
+                        x:Name="lblSupplierName"
+                        Content="取引先名(漢字)"
+                        Width="Auto"
+                        BorderBrush="Black"
+                        BorderThickness="1"/>
+                    <Label
+                        x:Name="lblWorkCode"
+                        Content="商品コード"
+                        Width="Auto"
+                        BorderBrush="Black"
+                        BorderThickness="1"/>
+                </StackPanel>
+                <StackPanel
+                    x:Name="panelSample"
+                    Orientation="Horizontal"
+                    Height="30"
+                    VerticalAlignment="Top">
+                    <TextBox
+                        x:Name="txtOrderDate_Sample"
+                        Text="20230919"
+                        Width="Auto"/>
+                    <TextBox
+                        x:Name="txtSupplierCode_Sample"
+                        Text="721204"
+                        Width="Auto"/>
+                    <TextBox
+                        x:Name="txtVDRCode_Sample"
+                        Text="233579"
+                        Width="Auto"/>
+                    <TextBox
+                        x:Name="txtSupplierName_Sample"
+                        Text="森永乳業㈱九州支店　　（福岡）　　　　　　　　　　"
+                        Width="Auto"/>
+                    <TextBox
+                        x:Name="txtWorkCode_Sample"
+                        Text="000253"
+                        Width="Auto"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>-->
+        
+        
+        <Border
+            Grid.Row="1"
+            Background="AliceBlue"
+            Width="800"
+            ScrollViewer.HorizontalScrollBarVisibility="Auto">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label
+                    x:Name="lblOrderDate"
+                    Content="納品日"
+                    Grid.Column="0"
+                    Width="Auto"
+                    BorderBrush="Black"
+                    BorderThickness="1"/>
+                <Label
+                    x:Name="lblOrderDate2"
+                    Content="納品日"
+                    Grid.Column="1"
+                    Width="Auto"
+                    BorderBrush="Black"
+                    BorderThickness="1"/>
+                <Label
+                    x:Name="lblOrderDate3"
+                    Content="納品日"
+                    Grid.Column="4"
+                    Width="Auto"
+                    BorderBrush="Black"
+                    BorderThickness="1"/>
+                <Label
+                    x:Name="lblOrderDate4"
+                    Content="納品日"
+                    Grid.Column="5"
+                    Width="Auto"
+                    BorderBrush="Black"
+                    BorderThickness="1"/>
+                <Label
+                    x:Name="lblOrderDate5"
+                    Content="納品日"
+                    Grid.Column="6"
+                    Width="Auto"
+                    BorderBrush="Black"
+                    BorderThickness="1"/>
+            </Grid>
+            
+            
+            
+        </Border>
+        
+    </Grid>
+
+
+</Window>

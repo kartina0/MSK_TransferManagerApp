@@ -1,0 +1,62 @@
+﻿<!-- Copyright © 2023 DATALINK -->
+<UserControl
+    x:Class="TransferManagerApp.ucTab_OperationMonitor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:TransferManagerApp"
+    mc:Ignorable="d" 
+    d:DesignHeight="700" d:DesignWidth="1900"
+    Loaded="UserControl_Loaded"
+    Visibility="Visible"
+    Background="{StaticResource PageColorOrder}">
+
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <!--現在便No表示-->
+        <!--<StackPanel
+            Grid.Row="0"
+            Margin="5"
+            Orientation="Horizontal">
+            <Label
+                x:Name="lblPostNo"
+                Content="1便"
+                VerticalContentAlignment="Center"
+                Padding="12,0,12,0"
+                Background="CadetBlue"/>
+        </StackPanel>-->
+
+        <!--アイルモニター-->
+        <local:ucAisle
+            x:Name="ucAisle01"
+            Grid.Row="1"
+            Margin="4,0,4,0"
+            Padding="0"/>
+        <local:ucAisle
+            x:Name="ucAisle02"
+            Grid.Row="2"
+            Margin="4,0,4,0"
+            Padding="0"/>
+        <local:ucAisle
+            x:Name="ucAisle03"
+            Grid.Row="3"
+            Margin="4,0,4,0"
+            Padding="0"/>
+        <local:ucAisle
+            x:Name="ucAisle04"
+            Grid.Row="4"
+            Margin="4,0,4,0"
+            Padding="0"/>
+    </Grid>
+
+
+</UserControl>

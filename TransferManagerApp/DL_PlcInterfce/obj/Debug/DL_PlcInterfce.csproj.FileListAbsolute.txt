@@ -1,0 +1,14 @@
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\DL_PlcInterfce\obj\Debug\DL_PlcInterfce.csproj.AssemblyReference.cache
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\DL_PlcInterfce\obj\Debug\DL_PlcInterfce.csproj.CoreCompileInputs.cache
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\Compiled\DL_PlcInterfce.dll
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\Compiled\DL_PlcInterfce.pdb
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\DL_PlcInterfce\obj\Debug\DL_PlcInterfce.csproj.CopyComplete
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\DL_PlcInterfce\obj\Debug\DL_PlcInterfce.dll
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\DL_PlcInterfce\obj\Debug\DL_PlcInterfce.pdb
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\Compiled\DL_PlcInterfce.dll
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\Compiled\DL_PlcInterfce.pdb
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\DL_PlcInterfce\obj\Debug\DL_PlcInterfce.csproj.AssemblyReference.cache
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\DL_PlcInterfce\obj\Debug\DL_PlcInterfce.csproj.CoreCompileInputs.cache
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\DL_PlcInterfce\obj\Debug\DL_PlcInterfce.csproj.CopyComplete
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\DL_PlcInterfce\obj\Debug\DL_PlcInterfce.dll
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\DL_PlcInterfce\obj\Debug\DL_PlcInterfce.pdb

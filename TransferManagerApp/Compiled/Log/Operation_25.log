@@ -1,0 +1,18 @@
+2024/03/19 19:08:05.629,windowOpening Window_Closing()
+2024/03/19 19:08:06.682,windowMain Button_Click() btnRegistry
+2024/03/19 19:08:06.683,windowMain Function() REGISTRY
+2024/03/19 19:08:06.886,windowOrder Window_Loaded()
+2024/03/19 19:08:06.889,ucTab_ShelfMaster UserControl_Loaded()
+2024/03/19 19:08:06.906,ucTab_ShelfMaster BtnBatch_Click() 
+2024/03/19 19:08:06.907,ucTab_ShelfMaster comboUnitNo_SelectionChanged()
+2024/03/19 19:09:53.734,windowOrder Button_Click() btnClose
+2024/03/19 19:09:53.734,windowOrder Window_Closing()
+2024/03/19 19:10:00.540,windowMain Button_Click() btnOrder
+2024/03/19 19:10:00.540,windowMain Function() ORDER
+2024/03/19 19:10:00.738,windowOrder Window_Loaded()
+2024/03/19 19:10:00.739,ucTab_OperationMonitor UserControl_Loaded()
+2024/03/19 19:10:00.750,ucTab_ProgressMonitor UserControl_Loaded()
+2024/03/19 19:10:00.755,ucTab_WorkStatus UserControl_Loaded()
+2024/03/19 19:10:00.779,ucTab_WorkStatus UserControl_Loaded()
+2024/03/19 19:10:05.401,windowOrder Button_Click() btnProgressMonitor
+2024/03/19 19:10:05.401,windowOrder Function() TAB_PROGRESS

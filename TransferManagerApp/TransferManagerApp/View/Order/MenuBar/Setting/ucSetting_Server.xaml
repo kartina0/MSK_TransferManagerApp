@@ -1,0 +1,144 @@
+﻿<!-- Copyright © 2023 DATALINK -->
+<UserControl x:Class="TransferManagerApp.ucSetting_Server"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TransferManagerApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="700"
+             Loaded="UserControl_Loaded">
+
+
+    <Grid
+        Background="AliceBlue">
+        <Grid.RowDefinitions >
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <Border
+            Grid.Row="0"
+            BorderBrush="LightGray"
+            BorderThickness="1">
+            <StackPanel
+                Margin="5"
+                Orientation="Horizontal">
+                <Label
+                    Content="サーバー設定"
+                    Margin="5,0,5,0"
+                    FontSize="32"/>
+            </StackPanel>
+        </Border>
+        <Border
+            Grid.Row="1"
+            BorderBrush="LightGray"
+            BorderThickness="1">
+            <DockPanel
+                Margin="5"
+                LastChildFill="False">
+                <Label
+                    Content="IPアドレス："
+                    Margin="10,0,0,0"
+                    DockPanel.Dock="Left"
+                    FontSize="24"
+                    VerticalAlignment="Center"/>
+                <StackPanel
+                    Margin="5"
+                    DockPanel.Dock="Right"
+                    Orientation="Horizontal">
+                    <TextBox
+                        x:Name="txtIpAddress01"
+                        Margin="5"
+                        Text="{Binding IpAddress01, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                        Width="80"
+                        FontSize="20"
+                        BorderBrush="Black"
+                        VerticalContentAlignment="Center"
+                        HorizontalContentAlignment="Center"/>
+                    <Label
+                        Content="."
+                        FontSize="20"
+                        VerticalAlignment="Center"/>
+                    <TextBox
+                        x:Name="txtIpAddress02"
+                        Margin="5"
+                        Text="{Binding IpAddress02, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                        Width="80"
+                        FontSize="20"
+                        BorderBrush="Black"
+                        VerticalContentAlignment="Center"
+                        HorizontalContentAlignment="Center"/>
+                    <Label
+                        Content="."
+                        FontSize="20"
+                        VerticalAlignment="Center"/>
+                    <TextBox
+                        x:Name="txtIpAddress03"
+                        Margin="5"
+                        Text="{Binding IpAddress03, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                        Width="80"
+                        FontSize="20"
+                        BorderBrush="Black"
+                        VerticalContentAlignment="Center"
+                        HorizontalContentAlignment="Center"/>
+                    <Label
+                        Content="."
+                        FontSize="20"
+                        VerticalAlignment="Center"/>
+                    <TextBox
+                        x:Name="txtIpAddress04"
+                        Margin="5"
+                        Text="{Binding IpAddress04, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                        Width="80"
+                        FontSize="20"
+                        BorderBrush="Black"
+                        VerticalContentAlignment="Center"
+                        HorizontalContentAlignment="Center"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+        <Border
+            Grid.Row="2"
+            BorderBrush="LightGray"
+            BorderThickness="1">
+            <DockPanel
+                Margin="5"
+                LastChildFill="False">
+                <Label
+                    Content="ポート番号："
+                    Margin="10,0,0,0"
+                    DockPanel.Dock="Left"
+                    FontSize="24"
+                    VerticalAlignment="Center"/>
+                <StackPanel
+                    Margin="5"
+                    DockPanel.Dock="Right"
+                    Orientation="Horizontal">
+                    <TextBox
+                        x:Name="txtPortNo"
+                        Margin="5"
+                        Text="{Binding PortNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                        Width="120"
+                        FontSize="20"
+                        BorderBrush="Black"
+                        VerticalContentAlignment="Center"
+                        HorizontalContentAlignment="Center"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+
+    </Grid>
+
+
+</UserControl>

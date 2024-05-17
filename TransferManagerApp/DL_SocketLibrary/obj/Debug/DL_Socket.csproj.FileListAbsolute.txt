@@ -1,0 +1,12 @@
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\Compiled\DL_Socket.dll
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\Compiled\DL_Socket.pdb
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\DL_SocketLibrary\obj\Debug\DL_Socket.csproj.AssemblyReference.cache
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\DL_SocketLibrary\obj\Debug\DL_Socket.csproj.CoreCompileInputs.cache
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\DL_SocketLibrary\obj\Debug\DL_Socket.dll
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\_backup\TransferManagerApp_20240118_1309\TransferManagerApp\DL_SocketLibrary\obj\Debug\DL_Socket.pdb
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\Compiled\DL_Socket.dll
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\Compiled\DL_Socket.pdb
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\DL_SocketLibrary\obj\Debug\DL_Socket.csproj.AssemblyReference.cache
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\DL_SocketLibrary\obj\Debug\DL_Socket.csproj.CoreCompileInputs.cache
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\DL_SocketLibrary\obj\Debug\DL_Socket.dll
+D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\DL_SocketLibrary\obj\Debug\DL_Socket.pdb

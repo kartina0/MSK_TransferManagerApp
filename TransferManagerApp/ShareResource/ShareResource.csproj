@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DEE7C52-8592-418B-9B21-A93E2FC9D702}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShareResource</RootNamespace>
+    <AssemblyName>ShareResource</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Compiled\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Compiled\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonStatus.cs" />
+    <Compile Include="LoginUserInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BatchModule\BatchModule.csproj">
+      <Project>{1ba25a0b-7966-4084-9750-c6dd34ec12f9}</Project>
+      <Name>BatchModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DL_Common\DL_Common.csproj">
+      <Project>{408fbc43-aa65-4698-b977-78ad0df00358}</Project>
+      <Name>DL_Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DL_Logger\DL_Logger.csproj">
+      <Project>{02f6e823-a0b2-4c04-9347-7fed39140941}</Project>
+      <Name>DL_Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DL_PlcInterfce\DL_PlcInterfce.csproj">
+      <Project>{212fe8c5-69a5-468f-8530-7a63d67ea530}</Project>
+      <Name>DL_PlcInterfce</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DL_SocketLibrary\DL_Socket.csproj">
+      <Project>{e6f7ab5e-318f-46b8-bb90-a0f35d6c7555}</Project>
+      <Name>DL_Socket</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ErrorCode\ErrorCode.csproj">
+      <Project>{675ecf34-a3a2-4f12-88c9-819e1e1c9955}</Project>
+      <Name>ErrorCode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PLCModule\PLCModule.csproj">
+      <Project>{109d90d0-ed3f-4390-9f0c-d54848f95df7}</Project>
+      <Name>PLCModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerModule\ServerModule.csproj">
+      <Project>{e18cb9b8-fba5-4507-8dfe-eb0f94837d09}</Project>
+      <Name>ServerModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemConfig\SystemConfig.csproj">
+      <Project>{ea68bd29-bc54-41c4-b146-24356a96eb03}</Project>
+      <Name>SystemConfig</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

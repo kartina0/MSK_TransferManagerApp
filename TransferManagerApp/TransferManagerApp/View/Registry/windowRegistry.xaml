@@ -1,0 +1,140 @@
+﻿<!-- Copyright © 2023 DATALINK -->
+<Window x:Class="TransferManagerApp.windowRegistry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TransferManagerApp"
+        mc:Ignorable="d"
+        Title="windowRegistry" Height="1000" Width="1900"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded" Closing="Window_Closing"
+        KeyUp="Window_KeyUp" KeyDown="Window_KeyDown"
+        Background="{StaticResource BaseColorRegistry}"
+        BorderThickness="1">
+    
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1.7*"/>
+        </Grid.RowDefinitions>
+
+
+        <local:ucHeader
+            x:Name="ucHeader"
+            Grid.Row="0"
+            Margin="0"/>
+
+        <Border 
+            Grid.Row ="1"
+            Margin="0"
+            BorderBrush="{StaticResource BorderColor}"
+            BorderThickness="1"
+            VerticalAlignment="Stretch">
+            <Menu 
+                FontSize="24"
+                Background="{StaticResource SecondColor}"
+                VerticalAlignment="Stretch">
+            </Menu>
+        </Border>
+        
+        <Grid
+            Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="12*"/>
+            </Grid.RowDefinitions>
+
+            <DockPanel
+                Grid.Row="0"
+                Margin="0"
+                LastChildFill="False">
+                <StackPanel
+                    Orientation="Horizontal"
+                    DockPanel.Dock="Left">
+                    <Button
+                        x:Name="btnShelfMaster"
+                        Content="棚マスタ" 
+                        Margin="5"
+                        Width="150"
+                        FontSize="22"
+                        Click="Button_Click"/>
+                </StackPanel>
+
+                <!--<Button
+                    x:Name="btnClose"
+                    Content="閉じる"
+                    DockPanel.Dock="Right"
+                    Background="#F0B0B0"
+                    Margin="5"
+                    Width="120"
+                    FontSize="24"
+                    Click="Button_Click"/>-->
+                <Button
+                    x:Name="btnClose"
+                    Content="閉じる"
+                    DockPanel.Dock="Right"
+                    Margin="5"
+                    Width="120"
+                    FontSize="24"
+                    Click="Button_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Border
+                                                Name="border" 
+                                                Background="#F0B0B0"
+                                                BorderBrush="DimGray"
+                                                BorderThickness="2"
+                                                CornerRadius="5">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Border>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#FFD0D0" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </DockPanel>
+
+
+            <local:ucTab_ShelfMaster
+                x:Name="ucTab_ShelfMaster"
+                Grid.Row="1"
+                Margin="3"
+                BorderBrush="{StaticResource BorderColor}"
+                BorderThickness="2"
+                Visibility="Visible"/>
+
+        </Grid>
+
+
+
+        <local:ucFooter
+            x:Name="ucFooter"
+            Grid.Row="3"
+            Margin="0"/>
+
+        <local:ucKeyControl
+            x:Name="ucKeyControl"
+            Grid.Row="4"
+            Margin="0"/>
+        
+    </Grid>
+    
+</Window>

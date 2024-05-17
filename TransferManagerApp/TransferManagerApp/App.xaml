@@ -1,0 +1,29 @@
+﻿<!-- Copyright © 2023 DATALINK -->
+<Application x:Class="TransferManagerApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TransferManagerApp">
+    
+    
+    <!--プロジェクト内のxaml共有リソース-->
+    <Application.Resources>
+        <SolidColorBrush x:Key="FirstColor" Color="MidnightBlue"/>
+        <SolidColorBrush x:Key="SecondColor" Color="Silver"/>
+        <SolidColorBrush x:Key="BaseColorOrder" Color="White"/>
+        <SolidColorBrush x:Key="PageColorOrder" Color="#FAFFFF"/>
+        <SolidColorBrush x:Key="ButtonColorOrder" Color="CornflowerBlue"/>
+        <!--<SolidColorBrush x:Key="PageColorOrder" Color="#DADAFA"/>-->
+        
+        <SolidColorBrush x:Key="BaseColorRegistry" Color="White"/>
+        <SolidColorBrush x:Key="PageColorRegistry" Color="#FFFFFA"/>
+        <SolidColorBrush x:Key="ButtonColorRegistry" Color="Khaki"/>
+
+        <SolidColorBrush x:Key="BorderColor" Color="DimGray"/>
+
+
+
+    </Application.Resources>
+
+    
+    
+</Application>

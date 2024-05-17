@@ -1,0 +1,78 @@
+2024/04/03 23:38:29.103,INFO,Logger起動
+2024/04/03 23:38:29.136,INFO,前回アプリ終了時ステータス取得 完了
+2024/04/03 23:38:29.170,METHOD_IN,PLC_IF.Open(DUMMY;PLC_AISLE127.0.0.1)
+2024/04/03 23:38:29.923,METHOD_OUT,PLC_IF.Open : STATUS_SUCCESS
+2024/04/03 23:38:29.926,INFO,Resource起動
+2024/04/03 23:38:29.946,SYSTEM,***********************************
+2024/04/03 23:38:29.946,SYSTEM,起動中 PC名=LAPTOP-DES3I23Q , IP=172.19.0.1
+2024/04/03 23:38:29.946,SYSTEM,OS Ver=Microsoft Windows NT 6.2.9200.0 
+2024/04/03 23:38:29.946,SYSTEM,TransferManagerApp Ver=1.0.0.0 
+2024/04/03 23:38:29.946,SYSTEM,***********************************
+2024/04/03 23:38:29.948,METHOD_IN,Manager Start()
+2024/04/03 23:38:29.948,INFO,システムスレッド 起動
+2024/04/03 23:38:29.953,METHOD_IN,Manager Thread_System()
+2024/04/03 23:38:29.962,INFO,接続確認スレッド 起動
+2024/04/03 23:38:29.966,METHOD_IN,Manager Thread_ConnectionCheck()
+2024/04/03 23:38:29.975,INFO,ファイルクリーナスレッド 起動
+2024/04/03 23:38:29.984,METHOD_IN,Manager Thread_FileCleaner()
+2024/04/03 23:38:29.992,INFO,エラー履歴ファイル出力スレッド 起動
+2024/04/03 23:38:29.996,METHOD_IN,Manager Thread_ErrorHistory()
+2024/04/03 23:38:30.004,METHOD_OUT,Manager Start : STATUS_SUCCESS
+2024/04/03 23:38:30.004,INFO,Manager起動
+2024/04/03 23:38:30.027,METHOD_IN,BatchFile Load()
+2024/04/03 23:38:30.280,METHOD_OUT,BatchFile.Load : STATUS_SUCCESS
+2024/04/03 23:38:30.280,INFO,BatchFile読み込み完了
+2024/04/03 23:38:30.329,ERROR,MasterFileManager ReadMasterWork() : System.FormatException: 入力文字列の形式が正しくありません。
+   場所 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   場所 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   場所 System.Int32.Parse(String s)
+   場所 ServerModule.MasterFileManager.ReadMasterWork() 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 559
+2024/04/03 23:38:30.377,ERROR,MASTER_WORK_FILE_READ_ERROR
+2024/04/03 23:38:30.392,INFO,店マスター読み出し完了
+2024/04/03 23:38:30.397,INFO,作業者マスター読み出し完了
+2024/04/03 23:38:30.421,ERROR,1便のPICKDATA0ファイルが本日のものではありません。
+2024/04/03 23:38:30.713,INFO,2便のPICKDATA読み出し完了
+2024/04/03 23:38:31.565,INFO,3便のPICKDATA読み出し完了
+2024/04/03 23:38:31.565,INFO,DB_IPアドレス : 127.0.0.1
+2024/04/03 23:38:31.565,INFO,DBセットアップ
+2024/04/03 23:38:32.750,INFO,既に本日のテーブルあり
+2024/04/03 23:38:34.221,METHOD_IN,ServerControl Start()
+2024/04/03 23:38:34.229,METHOD_IN,ServerControl Thread_Server()
+2024/04/03 23:38:34.234,METHOD_OUT,ServerControl Start : STATUS_SUCCESS
+2024/04/03 23:38:34.234,INFO,Serverスレッド起動
+2024/04/03 23:38:34.250,ERROR,MasterFileManager ReadMasterWork() : System.FormatException: 入力文字列の形式が正しくありません。
+   場所 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   場所 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   場所 System.Int32.Parse(String s)
+   場所 ServerModule.MasterFileManager.ReadMasterWork() 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 559
+2024/04/03 23:38:34.251,ERROR,MASTER_WORK_FILE_READ_ERROR
+2024/04/03 23:38:34.256,INFO,店マスター読み出し完了
+2024/04/03 23:38:34.256,ERROR,1便のPICKDATA0ファイルが本日のものではありません。
+2024/04/03 23:38:34.257,INFO,ServerControl 仕分データ取得中 1便
+2024/04/03 23:38:34.265,INFO,ServerControl 仕分データ取得中 2便
+2024/04/03 23:38:35.501,INFO,ServerControl 仕分データ取得中 3便
+2024/04/03 23:38:38.376,INFO,ServerControl 仕分データ取得 完了
+2024/04/03 23:38:38.376,INFO,ServerControl 仕分実績データ取得中 1便
+2024/04/03 23:38:38.380,INFO,ServerControl 仕分実績データ取得中 2便
+2024/04/03 23:38:38.380,INFO,ServerControl 仕分実績データ取得中 3便
+2024/04/03 23:38:38.381,INFO,ServerControl 仕分実績データ取得 完了
+2024/04/03 23:38:38.399,INFO,ServerControl 仕分実績データリスト作成/更新中 1便
+2024/04/03 23:38:38.400,INFO,ServerControl 仕分実績データリスト作成/更新中 2便
+2024/04/03 23:38:38.417,INFO,ServerControl 仕分実績データリスト作成/更新中 3便
+2024/04/03 23:38:38.434,INFO,ServerControl 仕分実績データリスト作成/更新 完了
+2024/04/03 23:38:38.434,INFO,ServerControl 仕分実績データ書込み中 1便
+2024/04/03 23:38:38.435,INFO,ServerControl 仕分実績データ書込み中 2便
+2024/04/03 23:38:38.435,INFO,ServerControl 仕分実績データ書込み中 3便
+2024/04/03 23:38:38.436,INFO,ServerControl 仕分実績データ書込み 完了
+2024/04/03 23:38:38.471,INFO,Serverスレッド初期化完了
+2024/04/03 23:38:38.474,METHOD_IN,Cycle Start()
+2024/04/03 23:38:38.487,METHOD_IN,Cycle Thread_Cycle()
+2024/04/03 23:38:38.490,METHOD_IN,CycleAisle Start()
+2024/04/03 23:38:38.503,METHOD_IN,CycleAisle Thread_Cycle()
+2024/04/03 23:38:38.504,METHOD_OUT,CycleAisle Start : STATUS_SUCCESS
+2024/04/03 23:38:38.504,METHOD_OUT,Cycle Start : STATUS_SUCCESS
+2024/04/03 23:38:38.504,INFO,Cycleスレッド起動
+2024/04/03 23:38:38.504,METHOD_OUT,windowOpening OpeningSequence : STATUS_SUCCESS
+2024/04/03 23:38:38.991,INFO,ネットワーク：PLC1に接続されました ： 127.0.0.1
+2024/04/03 23:38:38.992,INFO,ネットワーク：Serverに接続されました ： 127.0.0.1
+2024/04/03 23:38:39.109,CONTROL,windowOpening Window_Closing()

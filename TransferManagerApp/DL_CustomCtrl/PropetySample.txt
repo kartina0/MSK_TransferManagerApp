@@ -1,0 +1,22 @@
+﻿
+プロパティー属性設定について
+
+
+
+[Browsable(true)]
+[ReadOnly(true)]
+[DefaultProperty]
+[Description("説明")]
+
+複数行
+[Category("FILE"), DefaultValue(""), Editor(typeof(System.ComponentModel.Design.MultilineStringEditor), typeof(System.Drawing.Design.UITypeEditor))]
+
+
+ファイルダイアログで選択
+[Category("Data"), DefaultValue(""), Editor(typeof(System.Windows.Forms.Design.FileNameEditor), typeof(System.Drawing.Design.UITypeEditor))]
+
+コレクション
+[Editor("System.Windows.Forms.Design.StringCollectionEditor, System.Design",
+   typeof(System.Drawing.Design.UITypeEditor)),
+   TypeConverter(typeof(CollectionConverter)),
+   DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]

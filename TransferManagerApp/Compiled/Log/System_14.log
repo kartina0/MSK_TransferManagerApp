@@ -1,0 +1,157 @@
+2024/04/03 23:30:54.793,INFO,Logger起動
+2024/04/03 23:30:54.801,INFO,前回アプリ終了時ステータス取得 完了
+2024/04/03 23:30:54.819,METHOD_IN,PLC_IF.Open(DUMMY;PLC_AISLE127.0.0.1)
+2024/04/03 23:30:55.538,METHOD_OUT,PLC_IF.Open : STATUS_SUCCESS
+2024/04/03 23:30:55.542,INFO,Resource起動
+2024/04/03 23:30:55.558,SYSTEM,***********************************
+2024/04/03 23:30:55.558,SYSTEM,起動中 PC名=LAPTOP-DES3I23Q , IP=172.19.0.1
+2024/04/03 23:30:55.558,SYSTEM,OS Ver=Microsoft Windows NT 6.2.9200.0 
+2024/04/03 23:30:55.558,SYSTEM,TransferManagerApp Ver=1.0.0.0 
+2024/04/03 23:30:55.558,SYSTEM,***********************************
+2024/04/03 23:30:55.558,METHOD_IN,Manager Start()
+2024/04/03 23:30:55.558,INFO,システムスレッド 起動
+2024/04/03 23:30:55.562,METHOD_IN,Manager Thread_System()
+2024/04/03 23:30:55.572,INFO,接続確認スレッド 起動
+2024/04/03 23:30:55.577,METHOD_IN,Manager Thread_ConnectionCheck()
+2024/04/03 23:30:55.585,INFO,ファイルクリーナスレッド 起動
+2024/04/03 23:30:55.588,METHOD_IN,Manager Thread_FileCleaner()
+2024/04/03 23:30:55.598,INFO,エラー履歴ファイル出力スレッド 起動
+2024/04/03 23:30:55.604,METHOD_IN,Manager Thread_ErrorHistory()
+2024/04/03 23:30:55.613,METHOD_OUT,Manager Start : STATUS_SUCCESS
+2024/04/03 23:30:55.613,INFO,Manager起動
+2024/04/03 23:30:55.629,METHOD_IN,BatchFile Load()
+2024/04/03 23:30:55.798,METHOD_OUT,BatchFile.Load : STATUS_SUCCESS
+2024/04/03 23:30:55.798,INFO,BatchFile読み込み完了
+2024/04/03 23:30:55.825,ERROR,MasterFileManager ReadMasterWork() : System.FormatException: 入力文字列の形式が正しくありません。
+   場所 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   場所 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   場所 System.Int32.Parse(String s)
+   場所 ServerModule.MasterFileManager.ReadMasterWork() 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 559
+2024/04/03 23:30:55.849,ERROR,MASTER_WORK_FILE_READ_ERROR
+2024/04/03 23:30:55.866,INFO,店マスター読み出し完了
+2024/04/03 23:30:55.869,INFO,作業者マスター読み出し完了
+2024/04/03 23:30:55.878,ERROR,1便のPICKDATA0ファイルが本日のものではありません。
+2024/04/03 23:30:56.098,INFO,2便のPICKDATA読み出し完了
+2024/04/03 23:30:56.649,INFO,3便のPICKDATA読み出し完了
+2024/04/03 23:30:56.649,INFO,DB_IPアドレス : 127.0.0.1
+2024/04/03 23:30:56.649,INFO,DBセットアップ
+2024/04/03 23:30:57.722,INFO,既に本日のテーブルあり
+2024/04/03 23:31:00.132,INFO,DBレコード削除完了
+2024/04/03 23:31:38.052,INFO,商品ヘッダテーブル 書き込み完了
+2024/04/03 23:31:38.053,METHOD_IN,ServerControl Start()
+2024/04/03 23:31:38.058,METHOD_IN,ServerControl Thread_Server()
+2024/04/03 23:31:38.066,METHOD_OUT,ServerControl Start : STATUS_SUCCESS
+2024/04/03 23:31:38.066,INFO,Serverスレッド起動
+2024/04/03 23:31:38.085,ERROR,MasterFileManager ReadMasterWork() : System.FormatException: 入力文字列の形式が正しくありません。
+   場所 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   場所 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   場所 System.Int32.Parse(String s)
+   場所 ServerModule.MasterFileManager.ReadMasterWork() 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 559
+2024/04/03 23:31:38.085,ERROR,MASTER_WORK_FILE_READ_ERROR
+2024/04/03 23:31:38.092,INFO,店マスター読み出し完了
+2024/04/03 23:31:38.092,ERROR,1便のPICKDATA0ファイルが本日のものではありません。
+2024/04/03 23:31:38.092,INFO,ServerControl 仕分データ取得中 1便
+2024/04/03 23:31:38.098,INFO,ServerControl 仕分データ取得中 2便
+2024/04/03 23:31:40.835,INFO,ServerControl 仕分データ取得中 3便
+2024/04/03 23:31:46.931,INFO,ServerControl 仕分データ取得 完了
+2024/04/03 23:31:46.931,INFO,ServerControl 仕分実績データ取得中 1便
+2024/04/03 23:31:46.934,INFO,ServerControl 仕分実績データ取得中 2便
+2024/04/03 23:31:46.934,INFO,ServerControl 仕分実績データ取得中 3便
+2024/04/03 23:31:46.935,INFO,ServerControl 仕分実績データ取得 完了
+2024/04/03 23:31:46.954,INFO,ServerControl 仕分実績データリスト作成/更新中 1便
+2024/04/03 23:31:46.956,INFO,ServerControl 仕分実績データリスト作成/更新中 2便
+2024/04/03 23:31:46.970,INFO,ServerControl 仕分実績データリスト作成/更新中 3便
+2024/04/03 23:31:46.990,INFO,ServerControl 仕分実績データリスト作成/更新 完了
+2024/04/03 23:31:46.990,INFO,ServerControl 仕分実績データ書込み中 1便
+2024/04/03 23:31:46.991,INFO,ServerControl 仕分実績データ書込み中 2便
+2024/04/03 23:31:46.991,INFO,ServerControl 仕分実績データ書込み中 3便
+2024/04/03 23:31:46.992,INFO,ServerControl 仕分実績データ書込み 完了
+2024/04/03 23:31:47.048,INFO,Serverスレッド初期化完了
+2024/04/03 23:31:47.048,METHOD_IN,Cycle Start()
+2024/04/03 23:31:47.053,METHOD_IN,Cycle Thread_Cycle()
+2024/04/03 23:31:47.062,METHOD_IN,CycleAisle Start()
+2024/04/03 23:31:47.069,METHOD_IN,CycleAisle Thread_Cycle()
+2024/04/03 23:31:47.075,METHOD_OUT,CycleAisle Start : STATUS_SUCCESS
+2024/04/03 23:31:47.075,METHOD_OUT,Cycle Start : STATUS_SUCCESS
+2024/04/03 23:31:47.075,INFO,Cycleスレッド起動
+2024/04/03 23:31:47.075,METHOD_OUT,windowOpening OpeningSequence : STATUS_SUCCESS
+2024/04/03 23:31:47.631,INFO,ネットワーク：PLC1に接続されました ： 127.0.0.1
+2024/04/03 23:31:47.633,INFO,ネットワーク：Serverに接続されました ： 127.0.0.1
+2024/04/03 23:31:47.693,CONTROL,windowOpening Window_Closing()
+2024/04/03 23:31:49.997,CONTROL,windowMain Button_Click() btnOrder
+2024/04/03 23:31:49.997,CONTROL,windowMain Function() ORDER
+2024/04/03 23:31:50.232,CONTROL,windowOrder Window_Loaded()
+2024/04/03 23:31:50.233,CONTROL,ucTab_OperationMonitor UserControl_Loaded()
+2024/04/03 23:31:50.245,CONTROL,ucTab_ProgressMonitor UserControl_Loaded()
+2024/04/03 23:31:50.256,METHOD_OUT,ucTab_ProgressMonitor.InitListView : STATUS_SUCCESS
+2024/04/03 23:31:50.256,METHOD_IN,ucTab_ProgressMonitor.comboPostNo_SelectionChanged()
+2024/04/03 23:31:50.256,METHOD_OUT,ucTab_ProgressMonitor.comboPostNo_SelectionChanged : STATUS_SUCCESS
+2024/04/03 23:31:50.257,METHOD_OUT,ucTab_ProgressMonitor.InitTimer : STATUS_SUCCESS
+2024/04/03 23:31:50.257,CONTROL,ucTab_WorkStatus UserControl_Loaded()
+2024/04/03 23:31:50.286,METHOD_IN,ucTab_WorkStatus.UpdateWorkNameComboBox()
+2024/04/03 23:31:54.102,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:54.761,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:55.193,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:55.665,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:56.220,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:56.419,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:56.610,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:56.840,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:56.973,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:57.159,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:57.404,ERROR,MasterFileManager ReadMasterWork() : System.FormatException: 入力文字列の形式が正しくありません。
+   場所 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   場所 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   場所 System.Int32.Parse(String s)
+   場所 ServerModule.MasterFileManager.ReadMasterWork() 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 559
+2024/04/03 23:31:57.405,ERROR,MASTER_WORK_FILE_READ_ERROR
+2024/04/03 23:31:57.423,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:57.632,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:57.870,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:58.035,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:58.259,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:58.510,INFO,店マスター読み出し完了
+2024/04/03 23:31:58.510,ERROR,1便のPICKDATA0ファイルが本日のものではありません。
+2024/04/03 23:31:58.510,INFO,ServerControl 仕分データ取得中 1便
+2024/04/03 23:31:58.514,INFO,ServerControl 仕分データ取得中 2便
+2024/04/03 23:31:58.534,INFO,ServerControl 仕分データ取得中 3便
+2024/04/03 23:31:58.534,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:58.777,INFO,ServerControl 仕分データ取得 完了
+2024/04/03 23:31:58.804,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:59.076,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:59.227,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:59.467,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:59.691,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:31:59.923,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:32:00.151,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:32:00.320,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:32:00.492,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:32:00.764,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365
+2024/04/03 23:32:01.033,ERROR,MasterFileManager GetWorkNameFromJanCode() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.MasterFileManager.GetWorkNameFromJanCode(Int32 postIndex, String janCode, String& workName) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\MasterFile\MasterFileManager.cs:行 1365

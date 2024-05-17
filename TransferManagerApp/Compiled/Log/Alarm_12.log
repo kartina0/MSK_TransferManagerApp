@@ -1,0 +1,12 @@
+2024/04/03 07:30:06.624,サーバーの商品マスタファイルが本日のものではありません。
+2024/04/03 07:30:06.624,ローカルの商品マスタファイルが本日のものではありません。
+2024/04/03 07:30:06.626,サーバーの店マスタファイルが本日のものではありません。
+2024/04/03 07:30:06.626,ローカルの店マスタファイルが本日のものではありません。
+2024/04/03 07:30:06.627,サーバーの作業者マスタファイルが本日のものではありません。
+2024/04/03 07:30:06.627,ローカルの作業者マスタファイルが本日のものではありません。
+2024/04/03 07:30:06.637,1便のPICKDATA0ファイルが本日のものではありません。
+2024/04/03 07:30:21.063,PickDataManager WriteDB() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.PickDataManager.WriteDB(Int32 postIndex, List`1 masterStoreList) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\PICKDATA\PickDataManager.cs:行 873
+2024/04/03 07:30:21.804,PickDataManager WriteDB() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.PickDataManager.WriteDB(Int32 postIndex, List`1 masterStoreList) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\PICKDATA\PickDataManager.cs:行 873
+2024/04/03 07:30:21.889,EXCEPTION

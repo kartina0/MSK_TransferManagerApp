@@ -1,0 +1,670 @@
+﻿<!-- Copyright © 2023 DATALINK -->
+<Window 
+    x:Class="TransferManagerApp.windowOutputOrderReport"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:TransferManagerApp"
+    xmlns:System="clr-namespace:System;assembly=mscorlib"
+    mc:Ignorable="d"
+    ResizeMode="NoResize"
+    WindowStyle="None"
+    WindowStartupLocation="CenterScreen"
+    Title="仕分作業完了報告書出力" Height="900" Width="1700"
+    Loaded="Window_Loaded" Closing="Window_Closing"
+    BorderThickness="3">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Grid.Row="0"
+            Margin="30,0,0,0"
+            Orientation="Horizontal">
+            <ComboBox 
+                Name="comboPostNo" 
+                Width="120"
+                Height="60"
+                FontSize="20"
+                IsEditable="False"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                SelectionChanged="comboBox_SelectionChanged">
+                <ComboBoxItem Content="1便"/>
+                <ComboBoxItem Content="2便"/>
+                <ComboBoxItem Content="3便"/>
+            </ComboBox>
+        </StackPanel>
+        
+        <!--<DockPanel
+            Grid.Row="0"
+            Margin="30,15,30,15"
+            LastChildFill="False">
+
+            <Grid
+                DockPanel.Dock="Left"
+                Width="400">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.Resources>
+                    <Style TargetType="Label">
+                        <Setter Property="Background" Value="LightSteelBlue"></Setter>
+                    </Style>
+                    --><!--<Style TargetType="ComboBox">
+                        <Setter Property="Width" Value="140"></Setter>
+                    </Style>--><!--
+                </Grid.Resources>
+
+                <Label
+                    x:Name="lblOrderDate"
+                    Content="納品日"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontSize="20"
+                    Padding="0"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"/>
+                <Label
+                    x:Name="lblWorkDate"
+                    Content="作業日"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    FontSize="20"
+                    Padding="0"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"/>
+                <Label
+                    x:Name="lblPostNo"
+                    Content="便"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    FontSize="20"
+                    Padding="0"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"/>
+
+                <DatePicker
+                    x:Name="dpOrderDate"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    FontSize="20"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    SelectedDate="{Binding Source={x:Static System:DateTime.Today}, Mode=OneTime}">
+                    <DatePicker.CalendarStyle>
+                        <Style TargetType="Calendar">
+                            <Setter Property="FontSize" Value="8"/>
+                            <Setter Property="LayoutTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </DatePicker.CalendarStyle>
+                    <DatePicker.Template>
+                        <ControlTemplate TargetType="DatePicker">
+                            <Grid>
+                                <ToggleButton
+                                    x:Name="PART_Button"
+                                    Background="#ECECEC"
+                                    ClickMode="Press"
+                                    Focusable="false"
+                                    IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
+                                    <ToggleButton.Content>
+                                        <TextBlock Text="{Binding SelectedDate, RelativeSource={RelativeSource TemplatedParent}, StringFormat='{}{0:yyyy/MM/dd}'}"/>
+                                    </ToggleButton.Content>
+                                </ToggleButton>
+                                <Popup x:Name="PART_Popup" AllowsTransparency="true" StaysOpen="false">
+                                    <Border BorderBrush="#FFABADB3" BorderThickness="1" Background="#FFFFFFFF">
+                                        <Calendar x:Name="PART_Calendar"/>
+                                    </Border>
+                                </Popup>
+                            </Grid>
+                        </ControlTemplate>
+                    </DatePicker.Template>
+                </DatePicker>
+                <DatePicker
+                    x:Name="dpWorkDate"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    FontSize="20"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    SelectedDate="{Binding Source={x:Static System:DateTime.Today}, Mode=OneTime}">
+                    <DatePicker.CalendarStyle>
+                        <Style TargetType="Calendar">
+                            <Setter Property="FontSize" Value="8"/>
+                            <Setter Property="LayoutTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </DatePicker.CalendarStyle>
+                    <DatePicker.Template>
+                        <ControlTemplate TargetType="DatePicker">
+                            <Grid>
+                                <ToggleButton
+                                    x:Name="PART_Button"
+                                    Background="#ECECEC"
+                                    ClickMode="Press"
+                                    Focusable="false"
+                                    IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
+                                    <ToggleButton.Content>
+                                        <TextBlock Text="{Binding SelectedDate, RelativeSource={RelativeSource TemplatedParent}, StringFormat='{}{0:yyyy/MM/dd}'}"/>
+                                    </ToggleButton.Content>
+                                </ToggleButton>
+                                <Popup x:Name="PART_Popup" AllowsTransparency="true" StaysOpen="false">
+                                    <Border BorderBrush="#FFABADB3" BorderThickness="1" Background="#FFFFFFFF">
+                                        <Calendar x:Name="PART_Calendar"/>
+                                    </Border>
+                                </Popup>
+                            </Grid>
+                        </ControlTemplate>
+                    </DatePicker.Template>
+                </DatePicker>
+                <ComboBox
+                    x:Name="comboPostNo"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    FontSize="20"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    SelectionChanged="SelectionChanged"/>
+            </Grid>
+        </DockPanel>-->
+        
+        
+
+        <DockPanel
+            Grid.Row="1"
+            LastChildFill="False">
+            <Border
+                Margin="30,16,0,15"
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="1">
+                <StackPanel
+                    Width="110"
+                    Orientation="Vertical"
+                    Background="LightSteelBlue">
+                    <Label
+                        Content=""
+                        Margin="4,2,4,0"
+                        Background="LightSteelBlue"
+                        FontSize="20"
+                        HorizontalContentAlignment="Center"/>
+                    <Label
+                        Content="作業予定"
+                        Margin="4,0,4,0"
+                        Background="LightSteelBlue"
+                        FontSize="20"
+                        HorizontalContentAlignment="Center"/>
+                    <Label
+                        Content="入荷完了"
+                        Margin="4,0,4,0"
+                        Background="LightSteelBlue"
+                        FontSize="20"
+                        HorizontalContentAlignment="Center"/>
+                    <Label
+                        Content="仕分完了"
+                        Margin="4,0,4,0"
+                        Background="LightSteelBlue"
+                        FontSize="20"
+                        HorizontalContentAlignment="Center"/>
+                    <Label
+                        Content="庫内破損"
+                        Margin="4,0,4,0"
+                        Background="LightSteelBlue"
+                        FontSize="20"
+                        HorizontalContentAlignment="Center"/>
+                </StackPanel>
+            </Border>
+            
+            <ListView 
+                x:Name="listviewStationOrderCount"
+                Margin="0,15,0,15"
+                FontSize="20"
+                Padding="0"
+                Background="#F5F5F5"
+                ScrollViewer.VerticalScrollBarVisibility="Hidden">
+
+                <!-- ↓ Resource ↓ -->
+                <ListView.Resources>
+                    <!--ヘッダー色設定-->
+                    <Style TargetType="GridViewColumnHeader">
+                        <Setter Property="Padding" Value="0"/>
+                        <Setter Property="Height" Value="40"/>
+                        <Setter Property="Background" Value="LightSteelBlue"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                        <Setter Property="IsHitTestVisible" Value="False"/>
+                    </Style>
+                </ListView.Resources>
+
+                <!-- ↓ View ↓ -->
+                <!--アイテムの表示方法や列の定義-->
+                <ListView.View>
+                    <GridView>
+                        <!--各カラムの設定、及びデータソースの要素とのバインド-->
+                        <GridViewColumn 
+                            x:Name="columnSt1OrderCount"
+                            Header="1ST" 
+                            Width="180"
+                            DisplayMemberBinding="{Binding St1}">
+                        </GridViewColumn>
+                        <GridViewColumn 
+                            x:Name="columnSt2OrderCount"
+                            Header="2ST" 
+                            Width="180"
+                            DisplayMemberBinding="{Binding St2}">
+                        </GridViewColumn>
+                        <GridViewColumn 
+                            x:Name="columnSt3OrderCount"
+                            Header="3ST" 
+                            Width="180"
+                            DisplayMemberBinding="{Binding St3}">
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+
+                <!-- ↓ ItemContainerStyle ↓ -->
+                <!--ListViewItemの、行全体のスタイル設定、変更を行う-->
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Height" Value="37" />
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                        <Setter Property="Background" Value="Azure" />
+                        <Setter Property="FontSize" Value="18" />
+                        <Setter Property="BorderThickness" Value="0 1 0 0" />
+                        <Setter Property="BorderBrush" Value="Black" />
+                        <Setter Property="Margin" Value="0"/>
+
+                        <!--テンプレートの設定... コントロールに関するテンプレートを設定する-->
+                        <!-- ※マウスオーバー時に行の色がおかしくなるのを防止するために記述 -->
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <!--テンプレート定義... コントロールの外観や動作を細かく定義できる-->
+                                <ControlTemplate TargetType="ListViewItem">
+                                    <!--行全体の外観を定義-->
+                                    <Border
+                                        x:Name="Border" 
+                                        Background="{TemplateBinding Background}" 
+                                        BorderBrush="{TemplateBinding BorderBrush}" 
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        SnapsToDevicePixels="True">
+                                        <!--表示するデータの表示方法を定義-->
+                                        <GridViewRowPresenter
+                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                            Content="{TemplateBinding Content}"
+                                            Columns="{TemplateBinding GridView.ColumnCollection}"
+                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <!-- MouseOver trigger to change the background color when the mouse is over the ListViewItem -->
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="Blue" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+
+            <!--<ListView 
+                x:Name="listviewOrderCountStation02"
+                Margin="0,15,0,15"
+                FontSize="20"
+                Padding="0"
+                Background="#F5F5F5"
+                ScrollViewer.VerticalScrollBarVisibility="Hidden">
+
+                --><!-- ↓ Resource ↓ --><!--
+                <ListView.Resources>
+                    --><!--ヘッダー色設定--><!--
+                    <Style TargetType="GridViewColumnHeader">
+                        <Setter Property="Padding" Value="0"/>
+                        <Setter Property="Height" Value="40"/>
+                        <Setter Property="Background" Value="LightSteelBlue"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                        <Setter Property="IsHitTestVisible" Value="False"/>
+                    </Style>
+                </ListView.Resources>
+
+                --><!-- ↓ View ↓ -->
+                <!--アイテムの表示方法や列の定義--><!--
+                <ListView.View>
+                    <GridView>
+                        --><!--各カラムの設定、及びデータソースの要素とのバインド--><!--
+                        <GridViewColumn 
+                            x:Name="columnOrderCountStation01"
+                            Header="2ST" 
+                            Width="180"
+                            DisplayMemberBinding="{Binding Count}">
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+
+                --><!-- ↓ ItemContainerStyle ↓ -->
+                <!--ListViewItemの、行全体のスタイル設定、変更を行う--><!--
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Height" Value="40" />
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                        <Setter Property="Background" Value="Azure" />
+                        <Setter Property="FontSize" Value="18" />
+                        <Setter Property="BorderThickness" Value="0 1 0 0" />
+                        <Setter Property="BorderBrush" Value="Black" />
+                        <Setter Property="Margin" Value="0"/>
+
+                        --><!--テンプレートの設定... コントロールに関するテンプレートを設定する-->
+                        <!-- ※マウスオーバー時に行の色がおかしくなるのを防止するために記述 --><!--
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                --><!--テンプレート定義... コントロールの外観や動作を細かく定義できる--><!--
+                                <ControlTemplate TargetType="ListViewItem">
+                                    --><!--行全体の外観を定義--><!--
+                                    <Border
+                                        x:Name="Border" 
+                                        Background="{TemplateBinding Background}" 
+                                        BorderBrush="{TemplateBinding BorderBrush}" 
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        SnapsToDevicePixels="True">
+                                        --><!--表示するデータの表示方法を定義--><!--
+                                        <GridViewRowPresenter
+                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                            Content="{TemplateBinding Content}"
+                                            Columns="{TemplateBinding GridView.ColumnCollection}"
+                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        --><!-- MouseOver trigger to change the background color when the mouse is over the ListViewItem --><!--
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="Blue" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>-->
+
+            <!--<ListView 
+                x:Name="listviewOrderCountStation03"
+                Margin="0,15,0,15"
+                FontSize="20"
+                Padding="0"
+                Background="#F5F5F5"
+                ScrollViewer.VerticalScrollBarVisibility="Hidden">
+
+                --><!-- ↓ Resource ↓ --><!--
+                <ListView.Resources>
+                    --><!--ヘッダー色設定--><!--
+                    <Style TargetType="GridViewColumnHeader">
+                        <Setter Property="Padding" Value="0"/>
+                        <Setter Property="Height" Value="40"/>
+                        <Setter Property="Background" Value="LightSteelBlue"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                        <Setter Property="IsHitTestVisible" Value="False"/>
+                    </Style>
+                </ListView.Resources>
+
+                --><!-- ↓ View ↓ -->
+                <!--アイテムの表示方法や列の定義--><!--
+                <ListView.View>
+                    <GridView>
+                        --><!--各カラムの設定、及びデータソースの要素とのバインド--><!--
+                        <GridViewColumn 
+                            x:Name="columnOrderCountStation03"
+                            Header="3ST" 
+                            Width="180"
+                            DisplayMemberBinding="{Binding Count}">
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+
+                --><!-- ↓ ItemContainerStyle ↓ -->
+                <!--ListViewItemの、行全体のスタイル設定、変更を行う--><!--
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Height" Value="40" />
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                        <Setter Property="Background" Value="Azure" />
+                        <Setter Property="FontSize" Value="18" />
+                        <Setter Property="BorderThickness" Value="0 1 0 0" />
+                        <Setter Property="BorderBrush" Value="Black" />
+                        <Setter Property="Margin" Value="0"/>
+
+                        --><!--テンプレートの設定... コントロールに関するテンプレートを設定する-->
+                        <!-- ※マウスオーバー時に行の色がおかしくなるのを防止するために記述 --><!--
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                --><!--テンプレート定義... コントロールの外観や動作を細かく定義できる--><!--
+                                <ControlTemplate TargetType="ListViewItem">
+                                    --><!--行全体の外観を定義--><!--
+                                    <Border
+                                        x:Name="Border" 
+                                        Background="{TemplateBinding Background}" 
+                                        BorderBrush="{TemplateBinding BorderBrush}" 
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        SnapsToDevicePixels="True">
+                                        --><!--表示するデータの表示方法を定義--><!--
+                                        <GridViewRowPresenter
+                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                            Content="{TemplateBinding Content}"
+                                            Columns="{TemplateBinding GridView.ColumnCollection}"
+                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        --><!-- MouseOver trigger to change the background color when the mouse is over the ListViewItem --><!--
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="Blue" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>-->
+        </DockPanel>
+
+
+        <ListView 
+            x:Name="listviewOrderRemainInfo"
+            Grid.Row="2"
+            Margin="30,15,30,15"
+            FontSize="20"
+            Padding="0"
+            Background="#F5F5F5"
+            ScrollViewer.VerticalScrollBarVisibility="Visible">
+
+            <!-- ↓ Resource ↓ -->
+            <ListView.Resources>
+                <!--ヘッダー色設定-->
+                <Style TargetType="GridViewColumnHeader">
+                    <Setter Property="Height" Value="40"/>
+                    <Setter Property="Background" Value="LightSteelBlue"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="IsHitTestVisible" Value="False"/>
+                </Style>
+            </ListView.Resources>
+
+            <!-- ↓ View ↓ -->
+            <!--アイテムの表示方法や列の定義-->
+            <ListView.View>
+                <GridView>
+                    <!--各カラムの設定、及びデータソースの要素とのバインド-->
+                    <GridViewColumn 
+                        x:Name="columnJanCode"
+                        Header="JANコード"
+                        Width="100"
+                        DisplayMemberBinding="{Binding JanCode}">
+                    </GridViewColumn>
+                    <GridViewColumn 
+                        x:Name="columnWorkCode"
+                        Header="商品コード" 
+                        Width="100"
+                        DisplayMemberBinding="{Binding WorkCode}">
+                    </GridViewColumn>
+                    <GridViewColumn 
+                        x:Name="columnWorkName"
+                        Header="商品名" 
+                        Width="100"
+                        DisplayMemberBinding="{Binding WorkName}">
+                    </GridViewColumn>
+                    <GridViewColumn 
+                        x:Name="columnSupplierCode"
+                        Header="取引先コード"
+                        Width="100"
+                        DisplayMemberBinding="{Binding SupplierCode}">
+                    </GridViewColumn>
+                    <GridViewColumn 
+                        x:Name="columnSupplierName"
+                        Header="取引先名" 
+                        Width="100"
+                        DisplayMemberBinding="{Binding SupplierName}">
+                    </GridViewColumn>
+                    <GridViewColumn 
+                        x:Name="columnOrderCount"
+                        Header="仕分予定" 
+                        Width="100"
+                        DisplayMemberBinding="{Binding OrderCount}">
+                    </GridViewColumn>
+                    <GridViewColumn 
+                        x:Name="columnOrderCompCount"
+                        Header="入荷完了" 
+                        Width="100"
+                        DisplayMemberBinding="{Binding OrderCompCount}">
+                    </GridViewColumn>
+                    <GridViewColumn 
+                        x:Name="columnWorkDamagedCount"
+                        Header="庫内破損" 
+                        Width="100"
+                        DisplayMemberBinding="{Binding DamagedCount}">
+                    </GridViewColumn>
+                    <GridViewColumn 
+                        x:Name="columnOrderRemainCount"
+                        Header="未仕分数" 
+                        Width="100"
+                        DisplayMemberBinding="{Binding RemainCount}">
+                    </GridViewColumn>
+                    <GridViewColumn 
+                        x:Name="columnReason"
+                        Header="理由" 
+                        Width="100"
+                        DisplayMemberBinding="{Binding Reason}">
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+
+            <!-- ↓ ItemContainerStyle ↓ -->
+            <!--ListViewItemの、行全体のスタイル設定、変更を行う-->
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Height" Value="40" />
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                    <Setter Property="VerticalContentAlignment" Value="Center" />
+                    <Setter Property="Background" Value="Azure" />
+                    <Setter Property="FontSize" Value="18" />
+                    <Setter Property="BorderThickness" Value="0 1 0 0" />
+                    <Setter Property="BorderBrush" Value="Black" />
+                    <Setter Property="Margin" Value="0"/>
+
+                    <!--テンプレートの設定... コントロールに関するテンプレートを設定する-->
+                    <!-- ※マウスオーバー時に行の色がおかしくなるのを防止するために記述 -->
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <!--テンプレート定義... コントロールの外観や動作を細かく定義できる-->
+                            <ControlTemplate TargetType="ListViewItem">
+                                <!--行全体の外観を定義-->
+                                <Border x:Name="Border" 
+                                    Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    SnapsToDevicePixels="True">
+                                    <!--表示するデータの表示方法を定義-->
+                                    <GridViewRowPresenter 
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        Content="{TemplateBinding Content}"
+                                        Columns="{TemplateBinding GridView.ColumnCollection}"
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <!-- MouseOver trigger to change the background color when the mouse is over the ListViewItem -->
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="Border" Property="Background" Value="Lavender" />
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="Border" Property="Background" Value="#C0C0F0" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+
+
+        <DockPanel
+            Grid.Row="3"
+            Margin="30,0,30,0"
+            LastChildFill="False">
+            <StackPanel
+                DockPanel.Dock="Right"
+                Orientation="Horizontal">
+                <Button 
+                    x:Name="btnPreview"
+                    Content="プレビュー" 
+                    Margin="5,5,40,5"
+                    Width="120"
+                    Height="60"
+                    FontSize="20"
+                    Background="{StaticResource ButtonColorOrder}"
+                    Click="Button_Click"/>
+                <Button 
+                    x:Name="btnOutput"
+                    Content="出力" 
+                    Margin="5"
+                    Width="120"
+                    Height="60"
+                    FontSize="20"
+                    Background="{StaticResource ButtonColorOrder}"
+                    Click="Button_Click"/>
+                <Button 
+                    x:Name="btnExit"
+                    Content="閉じる"
+                    Margin="5"
+                    Width="120"
+                    Height="60"
+                    FontSize="20"
+                    Background="{StaticResource ButtonColorOrder}"
+                    Click="Button_Click"/>
+            </StackPanel>
+        </DockPanel>
+
+
+    </Grid>
+
+</Window>

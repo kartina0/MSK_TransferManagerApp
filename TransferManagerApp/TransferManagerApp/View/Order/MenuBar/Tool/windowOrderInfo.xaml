@@ -1,0 +1,447 @@
+﻿<!-- Copyright © 2023 DATALINK -->
+<Window 
+    x:Class="TransferManagerApp.windowOrderInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:TransferManagerApp"
+    mc:Ignorable="d"
+    ResizeMode="NoResize"
+    WindowStyle="None"
+    WindowStartupLocation="CenterScreen"
+    Title="仕分データ一覧" Height="940" Width="1600"
+    Loaded="Window_Loaded" Closing="Window_Closing"
+    Background="{StaticResource PageColorOrder}"
+    BorderBrush="MidnightBlue"
+    BorderThickness="2">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel
+            Grid.Row="0"
+            LastChildFill="False">
+            <StackPanel
+                Grid.Column="0"
+                DockPanel.Dock="Left"
+                Orientation="Horizontal">
+                <Button
+                    x:Name="btnWorkHeader"
+                    Content="商品ヘッダ" 
+                    Margin="5"
+                    Width="165"
+                    FontSize="20"
+                    Click="Button_Click"/>
+                <Button
+                    x:Name="btnStoreOrder"
+                    Content="店別小仕分け" 
+                    Margin="5"
+                    Width="165"
+                    FontSize="20"
+                    Click="Button_Click"/>
+                <Button
+                    x:Name="btnWorkHeaderExecute"
+                    Content="商品ヘッダ実績" 
+                    Margin="5"
+                    Width="165"
+                    FontSize="20"
+                    Click="Button_Click"/>
+                <Button
+                    x:Name="btnStoreOrderExecute"
+                    Content="店別小仕分け実績" 
+                    Margin="5"
+                    Width="165"
+                    FontSize="20"
+                    Click="Button_Click"/>
+                <Button
+                    x:Name="btnStoreOrder_batchConv"
+                    Content="棚マスタ変換情報" 
+                    Margin="50,5,5,5"
+                    Width="165"
+                    FontSize="20"
+                    Click="Button_Click"/>
+                <!--<Button
+                    x:Name="btnStoreOrderExecute_BatchConv"
+                    Content="店別小仕分け実績" 
+                    Margin="5"
+                    Width="165"
+                    FontSize="20"
+                    Click="Button_Click"/>-->
+            </StackPanel>
+            <Label
+                x:Name="lblTotalCount"
+                Margin="0,0,30,0"
+                DockPanel.Dock="Right"
+                FontSize="16"
+                VerticalContentAlignment="Bottom"/>
+        </DockPanel>
+
+
+        <DataGrid 
+            x:Name="dataGridWorkHeader"
+            Grid.Row="1"
+            Margin="5"
+            FontSize="17"
+            GridLinesVisibility="Horizontal"
+            HorizontalGridLinesBrush="LightGray"
+            IsReadOnly="True"
+            CanUserResizeColumns="False"
+            AutoGenerateColumns="False"
+            Visibility="Visible">
+            
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="" Binding="{Binding No}"/>
+                <DataGridTextColumn Header="仕分納品日" Binding="{Binding OrderDate}"/>
+                <DataGridTextColumn Header="仕分便No" Binding="{Binding PostNo}"/>
+                <DataGridTextColumn Header="発注納品日" Binding="{Binding OrderDateRequest}"/>
+                <DataGridTextColumn Header="発注便No" Binding="{Binding PostNoRequest}"/>
+                <DataGridTextColumn Header="商品コード" Binding="{Binding WorkCode}"/>
+                <DataGridTextColumn Header="連番" Binding="{Binding Index}"/>
+                <DataGridTextColumn Header="商品名(漢字)" Binding="{Binding WorkName}"/>
+                <DataGridTextColumn Header="JANコード" Binding="{Binding JANCode}"/>
+                <DataGridTextColumn Header="ケース入数" Binding="{Binding CaseVolume}"/>
+                <DataGridTextColumn Header="仕分け数合計" Binding="{Binding OrderCountTotal}"/>
+                <DataGridTextColumn Header="商品名(カナ)" Binding="{Binding WorkNameKana}"/>
+                <DataGridTextColumn Header="MAX積み付け段数" Binding="{Binding MaxStackNum}"/>
+                <DataGridTextColumn Header="売価１" Binding="{Binding SalesPrice}"/>
+                <DataGridTextColumn Header="仕分け作業状況" Binding="{Binding Process}"/>
+                <DataGridTextColumn Header="仕分け数(ST01)" Binding="{Binding OrderCount01}"/>
+                <DataGridTextColumn Header="仕分け数(ST02)" Binding="{Binding OrderCount02}"/>
+                <DataGridTextColumn Header="仕分け数(ST03)" Binding="{Binding OrderCount03}"/>
+                <DataGridTextColumn Header="仕分け数(ST04)" Binding="{Binding OrderCount04}"/>
+                <DataGridTextColumn Header="仕分け数(ST05)" Binding="{Binding OrderCount05}"/>
+                <DataGridTextColumn Header="仕分け数(ST06)" Binding="{Binding OrderCount06}"/>
+                <DataGridTextColumn Header="仕分け数(ST07)" Binding="{Binding OrderCount07}"/>
+                <DataGridTextColumn Header="仕分け数(ST08)" Binding="{Binding OrderCount08}"/>
+                <DataGridTextColumn Header="仕分け数(ST09)" Binding="{Binding OrderCount09}"/>
+                <DataGridTextColumn Header="店舗数(ST01)" Binding="{Binding StoreCount01}"/>
+                <DataGridTextColumn Header="店舗数(ST02)" Binding="{Binding StoreCount02}"/>
+                <DataGridTextColumn Header="店舗数(ST03)" Binding="{Binding StoreCount03}"/>
+                <DataGridTextColumn Header="店舗数(ST04)" Binding="{Binding StoreCount04}"/>
+                <DataGridTextColumn Header="店舗数(ST05)" Binding="{Binding StoreCount05}"/>
+                <DataGridTextColumn Header="店舗数(ST06)" Binding="{Binding StoreCount06}"/>
+                <DataGridTextColumn Header="店舗数(ST07)" Binding="{Binding StoreCount07}"/>
+                <DataGridTextColumn Header="店舗数(ST08)" Binding="{Binding StoreCount08}"/>
+                <DataGridTextColumn Header="店舗数(ST09)" Binding="{Binding StoreCount09}"/>
+                <DataGridTextColumn Header="登録日時" Binding="{Binding CreateDateTime}"/>
+                <DataGridTextColumn Header="登録ログインID" Binding="{Binding CreateLoginId}"/>
+                <DataGridTextColumn Header="更新日時" Binding="{Binding UpdateDateTimea}"/>
+                <DataGridTextColumn Header="更新ログインID" Binding="{Binding UpdateLoginId}"/>
+            </DataGrid.Columns>
+            
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Height" Value="60" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="Lavender"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="FontSize" Value="16"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="LightSteelBlue"/>
+                            <Setter Property="BorderThickness" Value="0" />
+                            <Setter Property="Foreground" Value="Black"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+
+
+        <DataGrid 
+            x:Name="dataGridStoreOrder"
+            Grid.Row="1"
+            Margin="5"
+            FontSize="17"
+            GridLinesVisibility="Horizontal"
+            HorizontalGridLinesBrush="LightGray"
+            IsReadOnly="True"
+            CanUserResizeColumns="False"
+            AutoGenerateColumns="False"
+            Visibility="Hidden">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="" Binding="{Binding No}"/>
+                <DataGridTextColumn Header="仕分納品日" Binding="{Binding OrderDate}"/>
+                <DataGridTextColumn Header="仕分便No" Binding="{Binding PostNo}"/>
+                <DataGridTextColumn Header="発注納品日" Binding="{Binding OrderDateRequest}"/>
+                <DataGridTextColumn Header="発注便No" Binding="{Binding PostNoRequest}"/>
+                <DataGridTextColumn Header="商品コード" Binding="{Binding WorkCode}"/>
+                <DataGridTextColumn Header="連番" Binding="{Binding Index}"/>
+                <DataGridTextColumn Header="店コード" Binding="{Binding StoreCode}"/>
+                <DataGridTextColumn Header="ステーションNo" Binding="{Binding StationNo}"/>
+                <DataGridTextColumn Header="アイルNo" Binding="{Binding AisleNo}"/>
+                <DataGridTextColumn Header="スロットNo" Binding="{Binding SlotNo}"/>
+                <DataGridTextColumn Header="ケース入数" Binding="{Binding CaseVolume}"/>
+                <DataGridTextColumn Header="仕分け数" Binding="{Binding OrderCount}"/>
+                <DataGridTextColumn Header="登録日時" Binding="{Binding CreateDateTime}"/>
+                <DataGridTextColumn Header="登録ログインID" Binding="{Binding CreateLoginId}"/>
+                <DataGridTextColumn Header="更新日時" Binding="{Binding UpdateDateTimea}"/>
+                <DataGridTextColumn Header="更新ログインID" Binding="{Binding UpdateLoginId}"/>
+            </DataGrid.Columns>
+
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Height" Value="60" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="Lavender"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="FontSize" Value="16"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="LightSteelBlue"/>
+                            <Setter Property="BorderThickness" Value="0" />
+                            <Setter Property="Foreground" Value="Black"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+
+
+        <DataGrid 
+            x:Name="dataGridWorkHeaderExecute"
+            Grid.Row="1"
+            Margin="5"
+            FontSize="17"
+            GridLinesVisibility="Horizontal"
+            HorizontalGridLinesBrush="LightGray"
+            IsReadOnly="True"
+            CanUserResizeColumns="False"
+            AutoGenerateColumns="False"
+            Visibility="Hidden">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="" Binding="{Binding No}"/>
+                <DataGridTextColumn Header="仕分納品日" Binding="{Binding OrderDate}"/>
+                <DataGridTextColumn Header="仕分便No" Binding="{Binding PostNo}"/>
+                <DataGridTextColumn Header="発注納品日" Binding="{Binding OrderDateRequest}"/>
+                <DataGridTextColumn Header="発注便No" Binding="{Binding PostNoRequest}"/>
+                <DataGridTextColumn Header="商品コード" Binding="{Binding WorkCode}"/>
+                <DataGridTextColumn Header="連番" Binding="{Binding Index}"/>
+                <DataGridTextColumn Header="JANコード" Binding="{Binding JANCode}"/>
+                <DataGridTextColumn Header="仕分け数合計" Binding="{Binding OrderCountTotal}"/>
+                <DataGridTextColumn Header="仕分け完了数合計" Binding="{Binding OrderCompCountTotal}"/>
+                <DataGridTextColumn Header="取込日時" Binding="{Binding LoadDateTime}"/>
+                <DataGridTextColumn Header="登録日時" Binding="{Binding CreateDateTime}"/>
+                <DataGridTextColumn Header="登録ログインID" Binding="{Binding CreateLoginId}"/>
+                <DataGridTextColumn Header="更新日時" Binding="{Binding UpdateDateTimea}"/>
+                <DataGridTextColumn Header="更新ログインID" Binding="{Binding UpdateLoginId}"/>
+            </DataGrid.Columns>
+
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Height" Value="60" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="Lavender"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="FontSize" Value="16"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="LightSteelBlue"/>
+                            <Setter Property="BorderThickness" Value="0" />
+                            <Setter Property="Foreground" Value="Black"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+
+
+        <DataGrid 
+            x:Name="dataGridStoreOrderExecute"
+            Grid.Row="1"
+            Margin="5"
+            FontSize="17"
+            GridLinesVisibility="Horizontal"
+            HorizontalGridLinesBrush="LightGray"
+            IsReadOnly="True"
+            CanUserResizeColumns="False"
+            AutoGenerateColumns="False"
+            Visibility="Hidden">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="" Binding="{Binding No}"/>
+                <DataGridTextColumn Header="仕分納品日" Binding="{Binding OrderDate}"/>
+                <DataGridTextColumn Header="仕分便No" Binding="{Binding PostNo}"/>
+                <DataGridTextColumn Header="発注納品日" Binding="{Binding OrderDateRequest}"/>
+                <DataGridTextColumn Header="発注便No" Binding="{Binding PostNoRequest}"/>
+                <DataGridTextColumn Header="商品コード" Binding="{Binding WorkCode}"/>
+                <DataGridTextColumn Header="連番" Binding="{Binding Index}"/>
+                <DataGridTextColumn Header="店コード" Binding="{Binding StoreCode}"/>
+                <DataGridTextColumn Header="ステーションNo" Binding="{Binding StationNo}"/>
+                <DataGridTextColumn Header="アイルNo" Binding="{Binding AisleNo}"/>
+                <DataGridTextColumn Header="スロットNo" Binding="{Binding SlotNo}"/>
+                <DataGridTextColumn Header="仕分け数" Binding="{Binding OrderCount}"/>
+                <DataGridTextColumn Header="仕分け完了数" Binding="{Binding OrderCompCount}"/>
+                <DataGridTextColumn Header="登録日時" Binding="{Binding CreateDateTime}"/>
+                <DataGridTextColumn Header="登録ログインID" Binding="{Binding CreateLoginId}"/>
+                <DataGridTextColumn Header="更新日時" Binding="{Binding UpdateDateTimea}"/>
+                <DataGridTextColumn Header="更新ログインID" Binding="{Binding UpdateLoginId}"/>
+            </DataGrid.Columns>
+
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Height" Value="60" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="Lavender"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="FontSize" Value="16"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="LightSteelBlue"/>
+                            <Setter Property="BorderThickness" Value="0" />
+                            <Setter Property="Foreground" Value="Black"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+
+
+        <DataGrid 
+            x:Name="dataGridBatchConvert"
+            Grid.Row="1"
+            Margin="5"
+            FontSize="17"
+            GridLinesVisibility="Horizontal"
+            HorizontalGridLinesBrush="LightGray"
+            IsReadOnly="True"
+            CanUserResizeColumns="False"
+            AutoGenerateColumns="False"
+            Visibility="Hidden">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="" Binding="{Binding No}"/>
+                <DataGridTextColumn Header="仕分納品日" Binding="{Binding OrderDate}"/>
+                <DataGridTextColumn Header="仕分便No" Binding="{Binding PostNo}"/>
+                <DataGridTextColumn Header="発注納品日" Binding="{Binding OrderDateRequest}"/>
+                <DataGridTextColumn Header="発注便No" Binding="{Binding PostNoRequest}"/>
+                <DataGridTextColumn Header="商品名(ｶﾅ)" Binding="{Binding WorkNameKana}"/>
+                <DataGridTextColumn Header="商品コード" Binding="{Binding WorkCode}"/>
+                <DataGridTextColumn Header="JANコード" Binding="{Binding JANCode}"/>
+                <DataGridTextColumn Header="店コード" Binding="{Binding StoreCode}"/>
+                <DataGridTextColumn Header="ステーション&#10;(PICKDATA)" Binding="{Binding StationNo_Original}"/>
+                <DataGridTextColumn Header="アイル&#10;(PICKDATA)" Binding="{Binding AisleNo_Original}"/>
+                <DataGridTextColumn Header="スロット&#10;(PICKDATA)" Binding="{Binding SlotNo_Original}"/>
+                <DataGridTextColumn Header="ステーション&#10;(マテハン)" Binding="{Binding StationNo_Convert}"/>
+                <DataGridTextColumn Header="アイル&#10;(マテハン)" Binding="{Binding AisleNo_Convert}"/>
+                <DataGridTextColumn Header="スロット&#10;(マテハン)" Binding="{Binding SlotNo_Convert}"/>
+                <DataGridTextColumn Header="仕分け数" Binding="{Binding OrderCount}"/>
+                <DataGridTextColumn Header="仕分け完了数" Binding="{Binding OrderCompCount}"/>
+            </DataGrid.Columns>
+
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Height" Value="60" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="Lavender"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="FontSize" Value="16"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="LightSteelBlue"/>
+                            <Setter Property="BorderThickness" Value="0" />
+                            <Setter Property="Foreground" Value="Black"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+
+
+        <DockPanel
+            Grid.Row="2"
+            LastChildFill="False">
+            <StackPanel
+                DockPanel.Dock="Right"
+                Orientation="Horizontal">
+                <Button 
+                    x:Name="btnUpdate"
+                    Content="更新" 
+                    Margin="5"
+                    Width="120"
+                    FontSize="20"
+                    Background="{StaticResource ButtonColorOrder}"
+                    BorderBrush="Black"
+                    Click="Button_Click"/>
+                <Button 
+                    x:Name="btnClose"
+                    Content="閉じる"
+                    Margin="5"
+                    Width="120"
+                    FontSize="20"
+                    Background="{StaticResource ButtonColorOrder}"
+                    BorderBrush="Black"
+                    Click="Button_Click"/>
+            </StackPanel>
+        </DockPanel>
+
+    </Grid>
+</Window>

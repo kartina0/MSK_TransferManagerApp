@@ -1,0 +1,400 @@
+﻿<!-- Copyright © 2023 DATALINK -->
+<UserControl 
+    x:Class="TransferManagerApp.ucAisle"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:TransferManagerApp"
+    mc:Ignorable="d" 
+    d:DesignHeight="180" d:DesignWidth="1850"
+    BorderThickness="1"
+    Loaded="UserControl_Loaded">
+
+
+    <UserControl.Resources>
+        <!--コントロールの表示非表示のbool切り替え用設定-->
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </UserControl.Resources>
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--全体背景-->
+        <Border 
+            x:Name="bdWhole"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            BorderBrush="Black"
+            BorderThickness="2"
+            Background="Silver"/>
+
+        <!--左-->
+        <DockPanel
+            Grid.Column="0"
+            LastChildFill="False">
+
+
+            <StackPanel
+                Margin="6">
+                <Label
+                    x:Name="lblAisleNo"
+                    Content="アイル 01"
+                    FontSize="20"/>
+                <Label
+                    x:Name="lblAutoStatus"
+                    Content="停止中"
+                    FontSize="20"
+                    BorderThickness="1"
+                    BorderBrush="Gray"
+                    HorizontalContentAlignment="Center"/>
+            </StackPanel>
+            
+            
+            
+            <!--<DockPanel
+                DockPanel.Dock="Top"
+                LastChildFill="False">
+                <Label
+                    x:Name="lblAisle01Title"
+                    Content="アイル1"
+                    DockPanel.Dock="Left"/>
+                <Label
+                    x:Name="lblAutoStatus"
+                    Content="停止中"
+                    DockPanel.Dock="Right"
+                    Width="50"
+                    BorderThickness="1"
+                    BorderBrush="Gray"
+                    HorizontalContentAlignment="Center"/>
+            </DockPanel>-->
+
+            <!--<StackPanel
+                DockPanel.Dock="Top"
+                Orientation="Horizontal"
+                Margin="2">
+                <Button 
+                    x:Name="btnPost01"
+                    Content="1便" 
+                    Width="30"
+                    Click="btnPost_Click"/>
+                <Button 
+                    x:Name="btnPost02"
+                    Content="2便"
+                    Width="30"
+                    Click="btnPost_Click"/>
+                <Button 
+                    x:Name="btnPost03"
+                    Content="3便"
+                    Width="30"
+                    Click="btnPost_Click"/>
+            </StackPanel>-->
+            <!--<StackPanel
+                DockPanel.Dock="Top"
+                Orientation="Horizontal"
+                Margin="2">
+                <Label
+                    x:Name="lblBatchNo"
+                    Content="バッチNo："
+                    FontSize="10"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    Padding="0"/>
+                <ComboBox
+                    x:Name="comboBatchNo"
+                    Width="50"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"/>
+            </StackPanel>-->
+            
+            <!--<Button
+                Content="削除"
+                DockPanel.Dock="Bottom"
+                Click="Button_Click"/>
+            <Button
+                Content="追加"
+                DockPanel.Dock="Bottom"
+                Click="Button_Click_1"/>-->
+
+        </DockPanel>
+
+        
+        <!--アイルビュー-->
+        <local:ucAisleTopView
+            x:Name="ucAisleTopView"
+            Grid.Column="1"/>
+
+
+
+        <!--<Border
+            Grid.Column="1"
+            Margin="5"
+            BorderBrush="{StaticResource BorderColor}"
+            BorderThickness="1"
+            CornerRadius="10">
+            <Grid
+                Margin="5,5,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid
+                    Grid.Column="0"
+                    Margin="10,4,0,4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel
+                        Grid.Row="0"
+                        VerticalAlignment="Center">
+                        <Border
+                            Width="30"
+                            Height="30">
+                            <Polygon
+                                x:Name="polygonSupply01"
+                                Fill="Black"
+                                Stroke="DimGray"
+                                StrokeThickness="0.5"
+                                Points="0,0 20,0 30,15 20,30 0,30"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel
+                        Grid.Row="2"
+                        VerticalAlignment="Center">
+                        <Border
+                            Width="30"
+                            Height="30">
+                            <Polygon
+                                x:Name="polygonSupply02"
+                                Fill="Black"
+                                Stroke="DimGray"
+                                StrokeThickness="0.5"
+                                Points="0,0 20,0 30,15 20,30 0,30"/>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+
+                <local:ucUnitView
+                    x:Name="ucUnitView01"
+                    Grid.Column="1"
+                    Margin="2,0,2,0"/>
+                <local:ucUnitView
+                    x:Name="ucUnitView02"
+                    Grid.Column="2"
+                    Margin="2,0,2,0"/>
+                <local:ucUnitView
+                    x:Name="ucUnitView03"
+                    Grid.Column="3"
+                    Margin="2,0,2,0"/>
+            </Grid>
+        </Border>-->
+
+        
+        <!--表-->
+        <ListView 
+            x:Name="listviewEntryWorkInfo"
+            Grid.Column="2"
+            Margin="10,5,10,5"
+            Padding="0"
+            Background="Gainsboro"
+            ScrollViewer.VerticalScrollBarVisibility="Hidden"
+            FontSize="18">
+
+            <!-- ↓ Resource ↓ -->
+            <ListView.Resources>
+                <!--ヘッダー色設定-->
+                <Style TargetType="GridViewColumnHeader">
+                    <Setter Property="Background" Value="Gainsboro" />
+                    <Setter Property="Foreground" Value="Black" />
+                    <Setter Property="FontSize" Value="17" />
+                    <Setter Property="IsHitTestVisible" Value="False" />
+                </Style>
+            </ListView.Resources>
+
+            <!-- ↓ View ↓ -->
+            <!--アイテムの表示方法や列の定義-->
+            <ListView.View>
+                <GridView>
+                    <!--各カラムの設定、及びデータソースの要素とのバインド-->
+                    <GridViewColumn 
+                        x:Name="columnWorkName"
+                        Header="商品名" 
+                        Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock 
+                                    Text="{Binding WorkName}" 
+                                    Foreground="Black"
+                                    Visibility="{Binding IsVisible, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn 
+                        x:Name="columnJanCode"
+                        Header="JANコード" 
+                        Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock 
+                                    Text="{Binding JANCode}" 
+                                    Foreground="Black"
+                                    Visibility="{Binding IsVisible, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn 
+                        x:Name="columnOrderCount"
+                        Header="仕分予定" 
+                        Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    Text="{Binding OrderCount}" 
+                                    Foreground="Black"
+                                    Visibility="{Binding IsVisible, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn 
+                        x:Name="columnOrderCompCount"
+                        Header="仕分完了" 
+                        Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock 
+                                    Text="{Binding OrderCompCount}" 
+                                    Foreground="Black"
+                                    Visibility="{Binding IsVisible, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn 
+                        x:Name="columnOrderRemainCount"
+                        Header="残り" 
+                        Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock 
+                                    Text="{Binding OrderRemainCount}" 
+                                    Foreground="Black"
+                                    Visibility="{Binding IsVisible, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn 
+                        x:Name="columnOrderProgress"
+                        Header="進捗"
+                        Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <DockPanel
+                                    Grid.Column="0"
+                                    Margin="2,0,2,0"
+                                    Width="200"
+                                    LastChildFill="False">
+                                    <Label
+                                        x:Name="lblPercent"
+                                        DockPanel.Dock="Left"
+                                        Content="{Binding OrderProgress}"
+                                        Width="40"
+                                        Foreground="Black"
+                                        Padding="8,0,1,0"
+                                        Margin="0,0,0,0"
+                                        HorizontalContentAlignment="Right"
+                                        Visibility="{Binding IsVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                    <Label
+                                        x:Name="lblPercentMark"
+                                        Content="％"
+                                        DockPanel.Dock="Left"
+                                        Foreground="Black"
+                                        Padding="5,0,0,0"
+                                        Margin="0,0,10,0"
+                                        Visibility="{Binding IsVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                    <ProgressBar
+                                        x:Name="progressPercent"
+                                        Margin="2"
+                                        Width="100"
+                                        DockPanel.Dock="Left"
+                                        Minimum="0"
+                                        Maximum="100"
+                                        Background="Gray"
+                                        Foreground="Cyan"
+                                        BorderBrush="DimGray"
+                                        Value="{Binding OrderProgress}"
+                                        Visibility="{Binding IsVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                    </ProgressBar>
+                                </DockPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn 
+                        x:Name="columnStatus"
+                        Header="ステータス" 
+                        Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock 
+                                    Text="{Binding Status}" 
+                                    Foreground="Black"
+                                    Visibility="{Binding IsVisible, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+
+            <!-- ↓ ItemContainerStyle ↓ -->
+            <!--ListViewItemの、行全体のスタイル設定、変更を行う-->
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Height" Value="26" />
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                    <Setter Property="Background" Value="Gray" />
+                    <Setter Property="BorderThickness" Value="0 1 0 0" />
+                    <Setter Property="BorderBrush" Value="Black" />
+                    <Setter Property="Margin" Value="0"/>
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="Padding" Value="0"/>
+
+                    <!--テンプレートの設定... コントロールに関するテンプレートを設定する-->
+                    <!-- ※マウスオーバー時に行の色がおかしくなるのを防止するために記述 -->
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <!--テンプレート定義... コントロールの外観や動作を細かく定義できる-->
+                            <ControlTemplate TargetType="ListViewItem">
+                                <!--行全体の外観を定義-->
+                                <Border x:Name="Border" 
+                                    Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    SnapsToDevicePixels="True">
+                                    <!--表示するデータの表示方法を定義-->
+                                    <GridViewRowPresenter 
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        Content="{TemplateBinding Content}"
+                                        Columns="{TemplateBinding GridView.ColumnCollection}"
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListView.ItemContainerStyle>
+            
+        </ListView>
+
+
+
+    </Grid>
+    
+</UserControl>

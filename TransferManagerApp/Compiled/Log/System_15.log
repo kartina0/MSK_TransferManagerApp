@@ -1,0 +1,46 @@
+2024/04/03 07:30:05.711,INFO,Logger起動
+2024/04/03 07:30:05.718,INFO,前回アプリ終了時ステータス取得 完了
+2024/04/03 07:30:05.744,METHOD_IN,PLC_IF.Open(DUMMY;PLC_AISLE127.0.0.1)
+2024/04/03 07:30:06.304,METHOD_OUT,PLC_IF.Open : STATUS_SUCCESS
+2024/04/03 07:30:06.307,INFO,Resource起動
+2024/04/03 07:30:06.322,SYSTEM,***********************************
+2024/04/03 07:30:06.322,SYSTEM,起動中 PC名=LAPTOP-DES3I23Q , IP=172.19.0.1
+2024/04/03 07:30:06.322,SYSTEM,OS Ver=Microsoft Windows NT 6.2.9200.0 
+2024/04/03 07:30:06.322,SYSTEM,TransferManagerApp Ver=1.0.0.0 
+2024/04/03 07:30:06.322,SYSTEM,***********************************
+2024/04/03 07:30:06.322,METHOD_IN,Manager Start()
+2024/04/03 07:30:06.322,INFO,システムスレッド 起動
+2024/04/03 07:30:06.326,METHOD_IN,Manager Thread_System()
+2024/04/03 07:30:06.336,INFO,接続確認スレッド 起動
+2024/04/03 07:30:06.340,METHOD_IN,Manager Thread_ConnectionCheck()
+2024/04/03 07:30:06.349,INFO,ファイルクリーナスレッド 起動
+2024/04/03 07:30:06.351,METHOD_IN,Manager Thread_FileCleaner()
+2024/04/03 07:30:06.363,INFO,エラー履歴ファイル出力スレッド 起動
+2024/04/03 07:30:06.365,METHOD_IN,Manager Thread_ErrorHistory()
+2024/04/03 07:30:06.376,METHOD_OUT,Manager Start : STATUS_SUCCESS
+2024/04/03 07:30:06.376,INFO,Manager起動
+2024/04/03 07:30:06.443,METHOD_IN,BatchFile Load()
+2024/04/03 07:30:06.623,METHOD_OUT,BatchFile.Load : STATUS_SUCCESS
+2024/04/03 07:30:06.623,INFO,BatchFile読み込み完了
+2024/04/03 07:30:06.624,ERROR,サーバーの商品マスタファイルが本日のものではありません。
+2024/04/03 07:30:06.624,ERROR,ローカルの商品マスタファイルが本日のものではありません。
+2024/04/03 07:30:06.626,ERROR,サーバーの店マスタファイルが本日のものではありません。
+2024/04/03 07:30:06.626,ERROR,ローカルの店マスタファイルが本日のものではありません。
+2024/04/03 07:30:06.627,ERROR,サーバーの作業者マスタファイルが本日のものではありません。
+2024/04/03 07:30:06.627,ERROR,ローカルの作業者マスタファイルが本日のものではありません。
+2024/04/03 07:30:06.637,ERROR,1便のPICKDATA0ファイルが本日のものではありません。
+2024/04/03 07:30:06.834,INFO,2便のPICKDATA読み出し完了
+2024/04/03 07:30:07.372,INFO,3便のPICKDATA読み出し完了
+2024/04/03 07:30:07.372,INFO,DB_IPアドレス : 127.0.0.1
+2024/04/03 07:30:07.372,INFO,DBセットアップ
+2024/04/03 07:30:08.447,INFO,既に本日のテーブルあり
+2024/04/03 07:30:11.310,INFO,DBレコード削除完了
+2024/04/03 07:30:21.063,ERROR,PickDataManager WriteDB() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.PickDataManager.WriteDB(Int32 postIndex, List`1 masterStoreList) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\PICKDATA\PickDataManager.cs:行 873
+2024/04/03 07:30:21.804,ERROR,PickDataManager WriteDB() : System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 ServerModule.PickDataManager.WriteDB(Int32 postIndex, List`1 masterStoreList) 場所 D:\work\PROJECT\三菱食品\自動仕分けシステム\01_Phase2.0\soft\仕分管理アプリ\TransferManagerApp\ServerModule\PICKDATA\PickDataManager.cs:行 873
+2024/04/03 07:30:21.804,INFO,商品ヘッダテーブル 書き込みエラー
+2024/04/03 07:30:21.889,ERROR,EXCEPTION
+2024/04/03 07:30:23.265,METHOD_OUT,windowOpening OpeningSequence : EXCEPTION
+2024/04/03 07:30:23.306,METHOD_IN,windowOpening Cancel()
+2024/04/03 07:30:23.306,METHOD_IN,Cycle Close()

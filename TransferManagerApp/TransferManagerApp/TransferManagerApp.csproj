@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D34C624-572D-45C4-AC73-8319CF9117AC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TransferManagerApp</RootNamespace>
+    <AssemblyName>TransferManagerApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Compiled\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Compiled\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\TransferManagerApp.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.WindowsRuntime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5\System.Runtime.WindowsRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Windows">
+      <HintPath>C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral\Annotated\Windows.winmd</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="View\Order\MenuBar\File\windowOutputOrderReport.xaml.cs">
+      <DependentUpon>windowOutputOrderReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Order\MenuBar\File\windowPreview.xaml.cs">
+      <DependentUpon>windowPreview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Order\MenuBar\Setting\ucSetting_Equipment.xaml.cs">
+      <DependentUpon>ucSetting_Equipment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Order\MenuBar\Setting\ucSetting_Server.xaml.cs">
+      <DependentUpon>ucSetting_Server.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Order\MenuBar\Setting\windowAuthority.xaml.cs">
+      <DependentUpon>windowAuthority.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Order\MenuBar\Tool\windowMasterFile.xaml.cs">
+      <DependentUpon>windowMasterFile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Order\MenuBar\Tool\windowOrderInfo.xaml.cs">
+      <DependentUpon>windowOrderInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Order\MenuBar\Setting\windowSystemSetting.xaml.cs">
+      <DependentUpon>windowSystemSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Order\UserCtrl\ucAisle.xaml.cs">
+      <DependentUpon>ucAisle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Order\UserCtrl\ucAisleTopView.xaml.cs">
+      <DependentUpon>ucAisleTopView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Order\UserCtrl\ucTab_ErrorHistory.xaml.cs">
+      <DependentUpon>ucTab_ErrorHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Order\UserCtrl\ucTab_ProgressMonitor.xaml.cs">
+      <DependentUpon>ucTab_ProgressMonitor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Order\UserCtrl\ucTab_WorkStatus.xaml.cs">
+      <DependentUpon>ucTab_WorkStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserCtrl\ucFooter.xaml.cs">
+      <DependentUpon>ucFooter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserCtrl\ucHeader.xaml.cs">
+      <DependentUpon>ucHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserCtrl\ucKeyControl.xaml.cs">
+      <DependentUpon>ucKeyControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Registry\UserCtrl\ucTab_ShelfMaster.xaml.cs">
+      <DependentUpon>ucTab_ShelfMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Order\windowOrder.xaml.cs">
+      <DependentUpon>windowOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Registry\windowRegistry.xaml.cs">
+      <DependentUpon>windowRegistry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Order\windowWorkStoreCount.xaml.cs">
+      <DependentUpon>windowWorkStoreCount.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\Order\MenuBar\File\windowOutputOrderReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Order\MenuBar\File\windowPreview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Order\MenuBar\Setting\ucSetting_Equipment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Order\MenuBar\Setting\ucSetting_Server.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Order\MenuBar\Setting\windowAuthority.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Order\MenuBar\Tool\windowMasterFile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Order\MenuBar\Tool\windowOrderInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Order\MenuBar\Setting\windowSystemSetting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Order\UserCtrl\ucAisle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Order\UserCtrl\ucAisleTopView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Order\UserCtrl\ucTab_ErrorHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Order\UserCtrl\ucTab_ProgressMonitor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Order\UserCtrl\ucTab_WorkStatus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserCtrl\ucFooter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserCtrl\ucHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserCtrl\ucKeyControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Order\UserCtrl\ucTab_OperationMonitor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Registry\UserCtrl\ucTab_ShelfMaster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserCtrl\ucWaitingCircle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windowOpening.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windowMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cycle\Cycle.cs" />
+    <Compile Include="Cycle\CycleAisle.cs" />
+    <Compile Include="Cycle\CycleStatus.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\ServerControl.cs" />
+    <Compile Include="View\Order\UserCtrl\ucTab_OperationMonitor.xaml.cs">
+      <DependentUpon>ucTab_OperationMonitor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserCtrl\ucWaitingCircle.xaml.cs">
+      <DependentUpon>ucWaitingCircle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windowOpening.xaml.cs">
+      <DependentUpon>windowOpening.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windowMain.xaml.cs">
+      <DependentUpon>windowMain.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\Order\windowOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Registry\windowRegistry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Order\windowWorkStoreCount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BatchModule\BatchModule.csproj">
+      <Project>{1ba25a0b-7966-4084-9750-c6dd34ec12f9}</Project>
+      <Name>BatchModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DL_Common\DL_Common.csproj">
+      <Project>{408fbc43-aa65-4698-b977-78ad0df00358}</Project>
+      <Name>DL_Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DL_CustomCtrl\DL_CustomCtrl.csproj">
+      <Project>{7d5617e5-cb4b-4e20-9111-3161d98f3cbb}</Project>
+      <Name>DL_CustomCtrl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DL_Logger\DL_Logger.csproj">
+      <Project>{02f6e823-a0b2-4c04-9347-7fed39140941}</Project>
+      <Name>DL_Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DL_PlcInterfce\DL_PlcInterfce.csproj">
+      <Project>{212fe8c5-69a5-468f-8530-7a63d67ea530}</Project>
+      <Name>DL_PlcInterfce</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DL_SocketLibrary\DL_Socket.csproj">
+      <Project>{e6f7ab5e-318f-46b8-bb90-a0f35d6c7555}</Project>
+      <Name>DL_Socket</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ErrorCode\ErrorCode.csproj">
+      <Project>{675ecf34-a3a2-4f12-88c9-819e1e1c9955}</Project>
+      <Name>ErrorCode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PLCModule\PLCModule.csproj">
+      <Project>{109d90d0-ed3f-4390-9f0c-d54848f95df7}</Project>
+      <Name>PLCModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerModule\ServerModule.csproj">
+      <Project>{e18cb9b8-fba5-4507-8dfe-eb0f94837d09}</Project>
+      <Name>ServerModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareResource\ShareResource.csproj">
+      <Project>{1dee7c52-8592-418b-9b21-a93e2fc9d702}</Project>
+      <Name>ShareResource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemConfig\SystemConfig.csproj">
+      <Project>{ea68bd29-bc54-41c4-b146-24356a96eb03}</Project>
+      <Name>SystemConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TransferManagerApp_Debug\TransferManagerApp_Debug.csproj">
+      <Project>{18b65441-9bf7-4828-8e81-b36337d18468}</Project>
+      <Name>TransferManagerApp_Debug</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PLC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\TransferManagerApp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
